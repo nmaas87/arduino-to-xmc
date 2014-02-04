@@ -1,7 +1,7 @@
 #summary First Steps.
 #labels FirstSteps,BareMinimum
 
-= First Steps to get Arduino code running =
+= First Steps to get Arduino code running on XMC1100 =
 
  * The board: Infineon XMC1100 Boot Kit 
  * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8) 

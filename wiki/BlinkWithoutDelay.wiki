@@ -8,7 +8,7 @@ Sometimes you need to do two things at once. For example you might want to blink
 
 = Hardware Required =
 
-XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
+XMC1100 Boot Kit board: http://arduino-to-xmc.googlecode.com/svn/wiki/myXMC1100.jpg
 
 = Circuit =
 

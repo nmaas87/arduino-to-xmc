@@ -9,7 +9,7 @@ This example shows the simplest thing you can do with an Arduino to see physical
 = Hardware Required =
 
 XMC1100 Boot Kit board: 
-http://arduino-to-xmc.googlecode.com/svn/wiki/myXMC1100s.jpg
+http://arduino-to-xmc.googlecode.com/svn/wiki/myXMC1100.jpg
 
 = Circuit =
 

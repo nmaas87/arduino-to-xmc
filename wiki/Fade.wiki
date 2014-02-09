@@ -39,7 +39,13 @@ XMC1100 board already has one LED connected to standard Arduino pin13 port. So, 
 int main(void)
 {
 
-	 /*
+	/*
+	  *  Wiring Initialization
+	  */
+	wiring_digital_init();
+	wiring_analog_init();
+
+	/*
 	  *  Periferals Initialization
 	  */
 	DAVE_Init();
@@ -59,7 +65,7 @@ int main(void)
 /*
  Fade
  
- This example shows how to fade an LED on pin 9
+ This example shows how to fade an LED on pin 13
  using the analogWrite() function.
  
  This example code is in the public domain.
@@ -71,8 +77,11 @@ int fadeAmount = 5;    // how many points to fade the LED by
 
 // the setup routine runs once when you press reset:
 void setup()  { 
-  // declare pin 9 to be an output:
-  pinMode(led, OUTPUT);
+  // declare LED to be an PWM output:
+  pinMode(led, PWM);
+
+  // Turn-Off LED1 sis is not used
+  pinMode(LED2, OUTPUT);
 } 
 
 // the loop routine runs over and over again forever:
@@ -94,4 +103,33 @@ void loop()  {
 //****************************************************************************
 // 							       END OF FILE
 //****************************************************************************
+}}}
+
+=== NOTE ==
+
+As you can see from the above code, to declare an output as PWM you must use the 'PWM' qualifier:
+{{{
+// the setup routine runs once when you press reset:
+void setup()  { 
+  // declare LED to be an PWM output:
+  pinMode(led, PWM);
+} 
+}}}
+
+*Attention:* This is different from standard Arduino Wiring syntax!!!
+
+In fact, Arduino Wiring syntax only declares: 
+{{{
+#define INPUT 0x0
+#define OUTPUT 0x1
+#define INPUT_PULLUP 0x2
+}}}
+
+While Arduino-to-XMC declares:
+{{{
+#define INPUT			0
+#define OUTPUT			1
+#define INPUT_PULLUP	2
+#define INPUT_PULLDW	3
+#define PWM				4
 }}}

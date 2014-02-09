@@ -15,6 +15,16 @@ Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_xmc
 
 Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_XMC1100_BootKit.zip Arduino_XMC1100_BootKit.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws')
 
+== Set-Up the Project Space ==
+
+Once the source files are in the DAVE Workspace, you will see something like this:
+https://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_DAvE.jpg
+
+Where:
+ 1 this is the linked 'Arduino_examples' folder
+ 2 this is the linked 'Arduino_xmc_cores' folder
+ 3 this is the selected example under compilation (use 'Properties -> Exclude resource from build) 
+
 == Code ==
 
 The setup() function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board. 
@@ -46,6 +56,12 @@ I was too lazy to split the main.c into the real 'main()' function part and the 
 
 int main(void)
 {
+
+	/*
+	  *  Wiring Initialization
+	  */
+	wiring_digital_init();
+	wiring_analog_init();
 
 	 /*
 	  *  Periferals Initialization

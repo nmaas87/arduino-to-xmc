@@ -108,3 +108,14 @@ void loop() {
 // 							       END OF FILE
 //****************************************************************************
 }}}
+
+== SETUP ==
+
+ # Connect the XMC1100 Boot Kit to your PC. Windows will install the necessary driver if it's connected the first time.
+ # Find XMC1100 virtual COM port via Control Panel->System->Device Manager->Ports->Jlink CDC UART Port (COMxx).
+ # Start Hyper Terminal on PC with the settings shown in http://arduino-to-xmc.googlecode.com/svn/wiki/TerminalSettings.jpg. 
+
+== EXECUTION ==
+This is what you will get on the terminal window:
+
+http://arduino-to-xmc.googlecode.com/svn/wiki/HelloWord.jpg

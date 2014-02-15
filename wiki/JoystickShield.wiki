@@ -3,14 +3,22 @@
 
 = Serial Monitor=
 
-Demonstrates the use of the serial monitor (serial comunication via RS232 over USB). 
+Demonstrates the use of the Joystik Shield (serial comunication via RS232 over USB). 
 
-[... http://arduino.cc/en/Tutorial/ ...]
+[... https://www.sparkfun.com/tutorials/171 ...]
 
 
 = Hardware Required =
 
+Joystick Shield:
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_1.JPG
+[... https://www.sparkfun.com/tutorials/171 ...]
+
+
 XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
+
+All together:
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_2.JPG
 
 = Circuit =
 

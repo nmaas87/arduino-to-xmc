@@ -174,6 +174,21 @@ This is what you will get on the terminal window:
 
 http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_3.jpg
 
+Here an extract of the terminal window:
+{{{
+x: 503 y: 496 s: 0
+x: 503 y: 496 s: 0
+x: 504 y: 496 s: 16
+x: 502 y: 498 s: 16
+x: 504 y: 497 s: 0
+x: 504 y: 497 s: 0
+x: 303 y: 496 s: 16
+x: 1 y: 496 s: 16
+x: 1 y: 81 s: 16
+x: 2 y: 1 s: 16
+x: 504 y: 496 s: 16
+}}}
+
 *Notes:* 
  * by pressing the Joystick,'s=0' otherwise 's=16'
  * bottom-left is 'x=1, y=1'

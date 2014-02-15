@@ -1,0 +1,36 @@
+#summary Examples Joystick Shield
+#labels Examples,JoystickShield
+
+= Serial Monitor=
+
+Demonstrates the use of the serial monitor (serial comunication via RS232 over USB). 
+
+[... http://arduino.cc/en/Tutorial/ ...]
+
+
+= Hardware Required =
+
+XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
+
+= Circuit =
+
+XMC1100 board already has the serial monitor port connected to the JTAG head. Simply connect a terminal software (e.g. TestTerm) on the respective COM port.
+
+= Code =
+{{{
+
+//****************************************************************************
+// 							       END OF FILE
+//****************************************************************************
+}}}
+
+== SETUP ==
+
+ # Connect the XMC1100 Boot Kit to your PC. Windows will install the necessary driver if it's connected the first time.
+ # Find XMC1100 virtual COM port via Control Panel->System->Device Manager->Ports->Jlink CDC UART Port (COMxx).
+ # Start Hyper Terminal on PC with the settings shown in http://arduino-to-xmc.googlecode.com/svn/wiki/TerminalSettings.jpg. 
+
+== EXECUTION ==
+This is what you will get on the terminal window:
+
+http://arduino-to-xmc.googlecode.com/svn/wiki/HelloWord.jpg

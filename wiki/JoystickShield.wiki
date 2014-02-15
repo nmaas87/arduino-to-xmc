@@ -10,12 +10,10 @@ Demonstrates the use of the Joystik Shield (serial comunication via RS232 over U
 
 = Hardware Required =
 
-Joystick Shield:
+XMC1100 Boot Kit board and Joystick Shield:
 https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_1.JPG
 [... https://www.sparkfun.com/tutorials/171 ...]
 
-
-XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
 
 All together:
 https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_2.JPG
@@ -41,4 +39,10 @@ XMC1100 board already has the serial monitor port connected to the JTAG head. Si
 == EXECUTION ==
 This is what you will get on the terminal window:
 
-http://arduino-to-xmc.googlecode.com/svn/wiki/HelloWord.jpg
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_3.JPG
+
+*Notes:* 
+ * by pressing the Joystick,'s=0' otherwise 's=16'
+ * bottom-left is 'x=1, y=1'
+ * top-right is 'x=1023, y=1023'
+

@@ -22,8 +22,8 @@ int main(void)
 	 /*
 	  *  Periferals Initialization
 	  */
-//	wiring_digital_init();
-//	wiring_analog_init();
+	wiring_digital_init();
+	wiring_analog_init();
 	DAVE_Init();
 
 	// Arduino's main() function just calls setup() and loop()....
@@ -102,3 +102,8 @@ void loop()
      digitalWrite(ledPin, ledState);
    }
 }
+
+//****************************************************************************
+// 							       END OF FILE
+//****************************************************************************
+

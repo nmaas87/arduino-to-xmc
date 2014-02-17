@@ -14,13 +14,12 @@ XMC1100 Boot Kit board and Joystick Shield:
 https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_1.JPG
 [... https://www.sparkfun.com/tutorials/171 ...]
 
-
-All together:
-https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_2.JPG
-
 = Circuit =
 
 XMC1100 board already has the serial monitor port connected to the JTAG head. Simply connect a terminal software (e.g. TestTerm) on the respective COM port.
+
+Simply plug the Joystick shield ontop of XMC1100, as such:
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Joystick_2.JPG
 
 = Code =
 {{{

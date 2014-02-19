@@ -1,7 +1,7 @@
 #summary Examples Real Time Clock (RTC) with date formatting as string
 #labels Examples,RTC,TimeSerialDateStrings
 
-= Real Time Clock (RTC) =
+= Real Time Clock (RTC):: example code illustrating Time library date strings =
 
 Demonstrates the use of the Real Time Clock (serial comunication via RS232 over USB) with date formatting as string (e.g. '23:09:27  Tue 19 Feb 2014'). 
 

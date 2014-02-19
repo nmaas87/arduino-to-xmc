@@ -14,7 +14,7 @@ XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/produ
 
 = Circuit =
 
-XMC1100 board already has the serial monitor port connected to the JTAG head. Simply connect a terminal software (e.g. TestTerm) on the respective COM port.
+XMC1100 board already has the serial monitor port connected to the JTAG head. Simply connect a terminal software (e.g. Tera Term) on the respective COM port.
 
 = Code =
 {{{

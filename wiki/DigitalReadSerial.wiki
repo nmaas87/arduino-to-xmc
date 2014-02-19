@@ -11,7 +11,7 @@ The pushbutton is a component that connects two points in a circuit when you pre
 
 = Hardware Required =
 
-XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
+XMC1100 Boot Kit board: https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Pushbutton.JPG
 
 When the pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, so the pin is connected to 5 volts (through the pull-up resistor) and we read a HIGH. When the button is closed (pressed), it makes a connection between its two legs, connecting the pin to ground, so that we read a LOW. (The pin is still connected to 5 volts, but the resistor in-between them means that the pin is "closer" to ground.)
 

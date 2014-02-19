@@ -426,7 +426,7 @@ uint32_t val = -1;
 			break;
 	}
 
-	return (val);
+	return ((val?HIGH:LOW));
 }
 
 

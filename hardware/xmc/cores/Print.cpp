@@ -26,17 +26,16 @@
 // @Project Includes
 //****************************************************************************
 
-#define _STDBOOL_H 1
 #include "Arduino.h"
-
+#include "Print.h"
 #include <DAVE3.h>
 
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 
-#include "Print.h"
+
 
 //****************************************************************************
 // @Macros

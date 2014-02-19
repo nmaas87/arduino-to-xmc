@@ -20,6 +20,10 @@
 #ifndef Printable_h
 #define Printable_h
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 #include <stdlib.h>
 
 class Print;
@@ -36,5 +40,9 @@ class Printable
     virtual size_t printTo(Print& p) const = 0;
 };
 
+
+#ifdef __cplusplus
+} // extern "C"
 #endif
 
+#endif /* Printable_h */

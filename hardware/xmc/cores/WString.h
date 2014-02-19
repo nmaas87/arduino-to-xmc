@@ -187,11 +187,11 @@ public:
 	long toInt(void) const;
 	float toFloat(void) const;
 
-protected:
+//protected:
 	char *buffer;	        // the actual char array
 	unsigned int capacity;  // the array length minus one (for the '\0')
 	unsigned int len;       // the String length (not counting the '\0')
-protected:
+//protected:
 	void init(void);
 	void invalidate(void);
 	unsigned char changeBuffer(unsigned int maxStrLen);

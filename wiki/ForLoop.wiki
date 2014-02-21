@@ -1,7 +1,7 @@
 #summary Example multiple LEDs using For Loop C statement
 #labels Example,ForLoop,LEDs
 
-= Array of LEDs =
+= For Loop and Array of LEDs =
 
 Often you want to iterate over a series of pins and do something to each one. For instance, this example blinks 6 LEDs attached the Arduino by using a for() loop to cycle back and forth through digital pins 30-35 (exdended XMC1100 LEDs). The LEDS are turned on and off, in sequence, by using both the digitalWrite() and delay() functions. 
 

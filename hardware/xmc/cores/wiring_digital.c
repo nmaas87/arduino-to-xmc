@@ -262,7 +262,7 @@ uint16_t outputMode = -1;
     		P2_0_set_mode(outputMode);
     		break;
 
-		// 30	Extended Leds P0.5
+		// LED2 30	Extended Leds P0.5
 		case LED2:
 			if (mode == PWM)
 				PWMSP001_Start(&PWMSP001_Handle0);
@@ -270,11 +270,30 @@ uint16_t outputMode = -1;
 				P0_5_set_mode(outputMode);
 			break;
 
-		// 31	Extended Leds P0.6
+		// LED3 31	Extended Leds P0.6
 		case LED3:
 			P0_6_set_mode(outputMode);
 			break;
 
+		// LED4
+		case LED4:
+			P1_2_set_mode(outputMode);
+			break;
+
+		// LED5
+		case LED5:
+			P1_3_set_mode(outputMode);
+			break;
+
+		// LED6
+		case LED6:
+			P1_4_set_mode(outputMode);
+			break;
+
+		// LED7
+		case LED7:
+			P1_5_set_mode(outputMode);
+			break;
 
 		// A0	P2.6		AA
     	case A0:
@@ -546,6 +565,36 @@ void digitalWrite(uint8_t pin, uint8_t value)
 			case 17:
 				P2_0_set();
 				break;
+
+			// LED2
+			case LED2:
+				P0_5_set();
+				break;
+
+			// LED3
+			case LED3:
+				P0_6_set();
+				break;
+
+			// LED4
+			case LED4:
+				P1_2_set();
+				break;
+
+			// LED5
+			case LED5:
+				P1_3_set();
+				break;
+
+			// LED6
+			case LED6:
+				P1_4_set();
+				break;
+
+			// LED7
+			case LED7:
+				P1_5_set();
+				break;
 		}
 
     } else {
@@ -553,92 +602,121 @@ void digitalWrite(uint8_t pin, uint8_t value)
 		{
 			//  0	P1.2		Device transmit UART signal-RXD
 			case 0:
-				P1_2_reset();;
+				P1_2_reset();
 				break;
 
 			//  1	P1.3		Device received UART signal-TXD
 			case 1:
-				P1_3_reset();;
+				P1_3_reset();
 				break;
 
 			//  2	P1.4		External interrupt
 			case 2:
-				P1_4_reset();;
+				P1_4_reset();
 				break;
 
 			//  3	P0.0		External interrupt / PWM output
 			case 3:
-				P0_0_reset();;
+				P0_0_reset();
 				break;
 
 			//  4	P0.1		GPIO
 			case 4:
-				P0_1_reset();;
+				P0_1_reset();
 				break;
 
 			//  5	P0.2		PWM output
 			case 5:
-				P0_2_reset();;
+				P0_2_reset();
 				break;
 
 			//  6	P0.3		PWM output
 			case 6:
-				P0_3_reset();;
+				P0_3_reset();
 				break;
 
 			//  7	P0.4		GPIO
 			case 7:
-				P0_4_reset();;
+				P0_4_reset();
 				break;
 
 			//  8	P0.12		GPIO
 			case 8:
-				P0_12_reset();;
+				P0_12_reset();
 				break;
 
 			//  9	P0.8		PWM output
 			case 9:
-				P0_8_reset();;
+				P0_8_reset();
 				break;
 
 			// 10	P0.9		SPI-SS / PWM output
 			case 10:
-				P0_9_reset();;
+				P0_9_reset();
 				break;
 
 			// 11	P1.1		SPI-MOSI / PWM output
 			case 11:
-				P1_1_reset();;
+				P1_1_reset();
 				break;
 
 			// 12	P1.0		SPI-MISO
 			case 12:
-				P1_0_reset();;
+				P1_0_reset();
 				break;
 
 			// 13	P0.7		SPI-SCK / LED output
 			case 13:
-				P0_7_reset();;
+				P0_7_reset();
 				break;
 
 			// 14	GND			Ground
 
 			// 15	P2.3		Analog reference voltage
 			case 15:
-				P2_3_reset();;
+				P2_3_reset();
 				break;
 
 			// 16	P2.1		I2C Data / Address
 			case 16:
-				P2_1_reset();;
+				P2_1_reset();
 				break;
 
 			// 17	P2.0		I2C Clock
 			case 17:
-				P2_0_reset();;
+				P2_0_reset();
+				break;
+
+			// LED2
+			case LED2:
+				P0_5_reset();
+				break;
+
+			// LED3
+			case LED3:
+				P0_6_reset();
+				break;
+
+			// LED4
+			case LED4:
+				P1_2_reset();
+				break;
+
+			// LED5
+			case LED5:
+				P1_3_reset();
+				break;
+
+			// LED6
+			case LED6:
+				P1_4_reset();
+				break;
+
+			// LED7
+			case LED7:
+				P1_5_reset();
 				break;
 		}
-
     }
 }
 

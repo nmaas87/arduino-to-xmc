@@ -9,11 +9,15 @@ You need:
 
 == Arduino to XMC Library ==
 
-Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_xmc_cores.zip Arduino_xmc_cores.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws') or stay tuner to the latest code changes via the Sub Version System (get  howto by reading [https://code.google.com/p/arduino-to-xmc/source/checkout svn].
+Arduino Wiring language is available in the Arduino/hardware/xx/core folder (where xxx is the Arduino board name). To keep the same software layout, I decided to put the porting to XMC into [https://code.google.com/p/arduino-to-xmc/source/browse/trunk/hardware/xmc/cores/ XMC1100].
+
+Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_xmc_cores.zip Arduino_xmc_cores.zip] and unzip in the DAVE 'ws' (e.g. 'C:\!UserData\Projects\DAVE3_workspace\ws') or stay tuner to the latest code changes via the Sub Version System (get  howto by reading [https://code.google.com/p/arduino-to-xmc/source/checkout svn]).
 
 == Arduino to XMC Project for DAVE™ 3.1.8 ==
 
-Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_XMC1100_BootKit.zip Arduino_XMC1100_BootKit.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws') or stay tuner to the latest code changes via the Sub Version System (get  howto by reading [https://code.google.com/p/arduino-to-xmc/source/checkout svn].
+Arduino-to-XMC porting is based on DAvE software layers. For such reason I prepared a DAvE CE project so to configure the XMC1100 peripherals and low level drivers.
+
+Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_XMC1100_BootKit.zip Arduino_XMC1100_BootKit.zip] and unzip in the DAVE 'ws' (e.g. 'C:\!UserData\Projects\DAVE3_workspace\ws') or stay tuner to the latest code changes via the Sub Version System (get  howto by reading [https://code.google.com/p/arduino-to-xmc/source/checkout svn]).
 
 == Set-Up the Project Space ==
 

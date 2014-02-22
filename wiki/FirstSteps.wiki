@@ -2,18 +2,18 @@
 #labels FirstSteps,BareMinimum
 
 = First Steps to get Arduino code running on XMC1100 =
-
+You need:
  * The board: Infineon XMC1100 Boot Kit 
  * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8) 
 
 
 == Arduino to XMC Library ==
 
-Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_xmc_cores.zip Arduino_xmc_cores.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws')
+Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_xmc_cores.zip Arduino_xmc_cores.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws') or stay tuner to the latest code changes via the Sub Version System (get  howto by reading [https://code.google.com/p/arduino-to-xmc/source/checkout svn].
 
 == Arduino to XMC Project for DAVE™ 3.1.8 ==
 
-Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_XMC1100_BootKit.zip Arduino_XMC1100_BootKit.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws')
+Download [http://code.google.com/p/arduino-to-xmc/source/browse/tags/Arduino_XMC1100_BootKit.zip Arduino_XMC1100_BootKit.zip] and unzip in the DAVE 'ws' (e.g. 'C:\UserData\Projects\DAVE3_workspace\ws') or stay tuner to the latest code changes via the Sub Version System (get  howto by reading [https://code.google.com/p/arduino-to-xmc/source/checkout svn].
 
 == Set-Up the Project Space ==
 

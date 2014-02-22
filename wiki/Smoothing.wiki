@@ -8,9 +8,8 @@ This sketch reads repeatedly from an analog input, calculating a running average
 
 
 = Hardware Required =
+XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
 
-XMC1100 Boot Kit board: 
-http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100.jpg
 
 = Circuit =
 

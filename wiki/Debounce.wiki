@@ -5,7 +5,7 @@
 
 This example demonstrates how to debounce an input, which means checking twice in a short period of time to make sure it's definitely pressed. Without debouncing, pressing the button once can appear to the code as multiple presses. Makes use of the millis() function to keep track of the time when the button is pressed. 
 
-[... http://arduino.cc/en/Tutorial/Debounce#.UwU3dvJd6M8 ...]
+[... http://arduino.cc/en/Tutorial/Debounce...]
 
 
 = Hardware Required =

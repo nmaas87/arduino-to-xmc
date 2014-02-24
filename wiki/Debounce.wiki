@@ -12,12 +12,10 @@ This example demonstrates how to debounce an input, which means checking twice i
 
 XMC1100 Boot Kit board: https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Pushbutton.JPG
 
-When the pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, so the pin is connected to 5 volts (through the pull-up resistor) and we read a HIGH. When the button is closed (pressed), it makes a connection between its two legs, connecting the pin to ground, so that we read a LOW. (The pin is still connected to 5 volts, but the resistor in-between them means that the pin is "closer" to ground.)
+When the pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, so the pin is connected to 5 volts (through the pull-up resistor) and we read a HIGH. When the button is closed (pressed), it makes a connection between its two legs, connecting the pin to ground, so that we read a LOW.
 
 
 = Circuit =
-
-We connect three wires to the XMC1100 board. The first goes from one leg of the pushbutton through a pull-up resistor (here 2.2 KOhms) to the 5 volt supply. The second goes from the corresponding leg of the pushbutton to ground. The third connects to a digital i/o pin (here pin 7) which reads the button's state. 
 
 Connect to pin 7 a wire to +5V or GND to simulate the pushbutton instead.
 

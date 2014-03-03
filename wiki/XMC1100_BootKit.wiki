@@ -7,6 +7,8 @@ http://www.infineon.com/export/sites/default/media/products/Microcontrollers/dev
  * Board shape & power supply for ARDUINOTM Shields: http://shieldlist.org
  * 6 LEDs
 
+= Arduino Uno Pins =
+https://arduino-to-xmc.googlecode.com/svn/wiki/ARDUINO_XMC1100_pins.png
 
 = Docs and links =
  * Boot Kit XMC110: [http://www.infineon.com/cms/en/product/microcontrollers/32-bit-industrial-microcontrollers-based-on-arm-registered-cortex-tm-m/32-bit-xmc4000-industrial-microcontrollers-arm-registered-cortex-tm-m4/xmc-development-tools-software-and-kits/xmc1000-starter-kits/boot-kit-xmc1100/channel.html?channel=db3a30433cfb5caa013d115dda020665 Documents]

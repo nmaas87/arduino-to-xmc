@@ -49,7 +49,7 @@ extern "C"{
 //****************************************************************************
 // #include general HEADER FILES.
 #include <XMC1100.h>
-#include <types.h>
+#include "types.h"
 #include ".\XMC1100\GPIO.h"
 
 // #include Arduino HEADER FILES.
@@ -59,10 +59,13 @@ extern "C"{
 #include "wiring_shift.h"
 #include "wiring_time.h"
 #include "wiring_clock.h"
+#include "itoa.h"
+#include "dtostrf.h"
 #include "WMath.h"
-//#include "WString.h"
-//#include "Print.h"
-//#include "Stream.h"
+#include "WString.h"
+#include "Print.h"
+#include "Printable.h"
+#include "Stream.h"
 
 /* Arduino wiring macros and bit defines  */
 #define HIGH		1
@@ -129,12 +132,14 @@ extern "C"{
 #define degrees(rad) ((rad)*RAD_TO_DEG)
 #define sq(x) ((x)*(x))
 
+#define map( x,  in_min,  in_max,  out_min,  out_max)	((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
+
 typedef uint8_t boolean;
 typedef uint8_t byte;
 typedef unsigned int word;
 
-void setup(void);
-void loop(void);
+extern void setup(void);
+extern void loop(void);
 
 #ifdef __cplusplus
 } // extern "C"

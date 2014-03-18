@@ -21,8 +21,11 @@
 #define Printable_h
 
 #ifdef __cplusplus
-extern "C"{
-#endif
+
+
+//****************************************************************************
+// @Project Includes
+//****************************************************************************
 
 #include <stdlib.h>
 
@@ -40,9 +43,7 @@ class Printable
     virtual size_t printTo(Print& p) const = 0;
 };
 
+#endif  // __cplusplus
 
-#ifdef __cplusplus
-} // extern "C"
 #endif
 
-#endif /* Printable_h */

@@ -22,6 +22,8 @@
 #ifndef Stream_h
 #define Stream_h
 
+#ifdef __cplusplus
+
 #include <inttypes.h>
 #include "Print.h"
 
@@ -92,5 +94,7 @@ class Stream : public Print
 
   float parseFloat(char skipChar);  // as above but the given skipChar is ignored
 };
+
+#endif  // __cplusplus
 
 #endif

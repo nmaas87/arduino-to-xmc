@@ -40,6 +40,10 @@
 #ifndef WIRING_DIGITAL_H_
 #define WIRING_DIGITAL_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /******************************************************************************
 **                      Include Files                                        **
 ******************************************************************************/
@@ -121,5 +125,9 @@ static inline void toggleLED6() {
 static inline void toggleLED7() {
 	P1_5_toggle();
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* WIRING_DIGITAL_H_ */

@@ -22,6 +22,10 @@
 #ifndef WIRING_CLOCK_H_
 #define WIRING_CLOCK_H_
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /******************************************************************************
 **                      Include Files                                        **
 ******************************************************************************/
@@ -106,5 +110,9 @@ void    	setTime(uint8_t hr,uint8_t min,uint8_t sec,uint8_t day,uint8_t month,ui
 
 char* monthStr(uint8_t month);
 char* dayStr(uint8_t day);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* WIRING_CLOCK_H_ */

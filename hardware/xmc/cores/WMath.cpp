@@ -110,12 +110,12 @@ extern "C" {
 // @Date          28/01/2014
 //
 //****************************************************************************
-
+/*
 long map(long value, long fromLow, long fromHigh, long toLow, long toHigh)
 {
 	return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
 }
-
+*/
 
 //****************************************************************************
 // @Function     makeWord

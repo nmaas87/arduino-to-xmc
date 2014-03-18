@@ -1,31 +1,14 @@
-//****************************************************************************
-// @Module        Arduino-compatible timer implementation.
-// @Filename      Print.cpp
-// @Project       Arduino_XMC
-//----------------------------------------------------------------------------
-// @Controller    Infineon XMC1x00
-//
-// @Compiler      GCC
-//
-// @Codegenerator DAvE 3.0 Compatible
-//
-// @Description   This file contains low level functions to implement the
-//					Serial Print class.
-//
-// @Link          http://arduino.cc/en/Serial/Print
-//
-//----------------------------------------------------------------------------
-// @Date          11/02/2014 00.17.23
-//
-//****************************************************************************
-
+/*
+ * Print.h
+ *
+ *  Created on: 11/feb/2014
+ *      Author: atti
+ */
 
 #ifndef PRINT_H_
 #define PRINT_H_
 
 #ifdef __cplusplus
-extern "C"{
-#endif
 
 //****************************************************************************
 // @Project Includes
@@ -72,8 +55,6 @@ private:
 };
 
 
-#ifdef __cplusplus
-} // extern "C"
-#endif
+#endif  // __cplusplus
 
 #endif /* PRINT_H_ */

@@ -1,4 +1,4 @@
-#summary Example Example > Control Structures
+#summary Example If Statements
 #labels Examples,IfStatement
 
 = If Statement (Conditional Statement) =
@@ -37,8 +37,7 @@ You'll use if statements all the time. The example below turns on an LED on pin 
 
 = Hardware Required =
 
-XMC1100 Boot Kit board: 
-http://arduino-to-xmc.googlecode.com/svn/wiki/myXMC1100.jpg
+XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
 
 = Circuit =
 

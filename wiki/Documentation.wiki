@@ -29,7 +29,7 @@ pinMode(1,INPUT);
 #define OUTPUT		1
 #define INPUT_PULLUP	2
 #define INPUT_PULLDW	3
-#define PWM			4
+#define PWM		4
 }}}
 
 =Digital input/output=

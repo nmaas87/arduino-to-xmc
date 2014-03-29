@@ -35,7 +35,8 @@ pinMode(1,INPUT);
 =Digital input/output=
 
 *digitalWrite(PIN,DATA);*
-Send digtal DATA output to PIN. DATA can be either HIGH or LOW
+Send digtal DATA output to PIN. DATA can be either HIGH or LOW?
+
 Example:
 {{{
 pinMode(2,OUTPUT);
@@ -44,6 +45,7 @@ digitalWrite(2,HIGH);
 
 *digitalRead(PIN);*
 Read digital input from PIN. The result can be either HIGH or LOW.
+
 Example:
 {{{
 bool PB1state;
@@ -62,6 +64,7 @@ Serial.println("PIN1 state is low");
 
 *analogRead(ADC_CHANNEL);*
 Read analog input, the output value is between 0-4095 representing 0-5V.
+
 Example:
 {{{
 int AnalogData;

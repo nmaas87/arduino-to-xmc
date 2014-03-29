@@ -5,6 +5,8 @@
 
 Here some deeper documentation of the Arduino Wiring language porting to XMC microcontrollers.
 
+*Note:* this page contains the documentation of only the Wiring language statements that have been ported to XMC microcontrollers.
+
 
 =Pin mode=
 

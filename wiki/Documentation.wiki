@@ -25,11 +25,11 @@ pinMode(1,INPUT);
 
 *Note:* Arduino-to-XMC declares:
 {{{
-#define INPUT			0
-#define OUTPUT			1
+#define INPUT		0
+#define OUTPUT		1
 #define INPUT_PULLUP	2
 #define INPUT_PULLDW	3
-#define PWM				4
+#define PWM			4
 }}}
 
 =Digital input/output=

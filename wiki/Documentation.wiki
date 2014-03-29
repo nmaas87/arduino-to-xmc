@@ -20,7 +20,7 @@ MODE can be:
 
 Example:
 {{{
-pinMode(PB1,INPUT);
+pinMode(1,INPUT);
 }}}
 
 *Note:* Arduino-to-XMC declares:

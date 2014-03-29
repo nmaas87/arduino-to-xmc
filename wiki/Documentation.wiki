@@ -9,7 +9,7 @@ Here some deeper documentation of the Arduino Wiring language porting to XMC mic
 =Pin mode=
 
 *pinMode(PIN,MODE);*
-Set the specified PIN to MODE?
+Set the specified PIN to MODE.
 
 MODE can be:
  * INPUT for receiving digital input

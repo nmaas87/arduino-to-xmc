@@ -10,15 +10,14 @@ Here some deeper documentation of the Arduino Wiring language porting to XMC mic
 
 *pinMode(PIN,MODE);*
 Set the specified PIN to MODE
-MODE can be
+MODE can be:
+ * INPUT for receiving digital input
+ * INPUT_PULLUP for receiving digital input having pull-up resistor connected
+ * INPUT_PULLDW for receiving digital input having pull-down resistor connected
+ * OUTPUT for sending digital output
+ * PWM for setting pulse width modulation output 
 
-INPUT for receiving digital input
-INPUT_PULLUP for receiving digital input having pull-up resistor connected
-INPUT_PULLDW for receiving digital input having pull-down resistor connected
-OUTPUT for sending digital output
-PWM for setting pulse width modulation output 
-
-example:
+Example:
 {{{
 pinMode(PB1,INPUT);
 }}}
@@ -36,14 +35,15 @@ pinMode(PB1,INPUT);
 
 *digitalWrite(PIN,DATA);*
 Send digtal DATA output to PIN. DATA can be either HIGH or LOW
-example:
+Example:
 {{{
 pinMode(PB2,OUTPUT);
 digitalWrite(PB2,HIGH);
-digitalRead(PIN);
 }}}
+
+*digitalRead(PIN);*
 Read digital input from PIN. The result can be either HIGH or LOW.
-example:
+Example:
 {{{
 bool PB1state;
  
@@ -51,25 +51,23 @@ pinMode(PB1,INPUT);
 PB1state=digitalRead(PB1);
 if(PB1state==HIGH)
 {
-Serial1.println("PB1 state is high");
+Serial.println("PB1 state is high");
 } else {
-Serial1.println("PB1 state is low");
+Serial.println("PB1 state is low");
 }
 }}}
 
 =Analog input (ADC)=
 
 *analogRead(ADC_CHANNEL);*
-
 Read analog input, the output value is between 0-4095 representing 0-5V.
 Example
 {{{
 int AnalogData;
 
 AnalogData=analogRead(A0);
-Serial1.printf("Analog channel 0 input is %d",AnalogData);
+Serial.printf("Analog channel 0 input is %d",AnalogData);
 
 AnalogData=analogRead(A6);
-Serial1.printf("Analog channel 6 input is %d",AnalogData);
+Serial.printf("Analog channel 6 input is %d",AnalogData);
 }}}
-

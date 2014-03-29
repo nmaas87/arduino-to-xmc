@@ -13,9 +13,21 @@ Set the specified PIN to MODE
 MODE can be
 
 INPUT for receiving digital input
+INPUT_PULLUP for receiving digital input having pull-up resistor connected
+INPUT_PULLDW for receiving digital input having pull-down resistor connected
 OUTPUT for sending digital output
+PWM for setting pulse width modulation output 
 
-(not that not every PIN has analog functionality, please refer to PIN definition table)
 example:
-
+{{{
 pinMode(PB1,INPUT);
+}}}
+
+*Note:* Arduino-to-XMC declares:
+{{{
+#define INPUT			0
+#define OUTPUT			1
+#define INPUT_PULLUP	2
+#define INPUT_PULLDW	3
+#define PWM				4
+}}}

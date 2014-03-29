@@ -37,8 +37,8 @@ pinMode(PB1,INPUT);
 Send digtal DATA output to PIN. DATA can be either HIGH or LOW
 Example:
 {{{
-pinMode(PB2,OUTPUT);
-digitalWrite(PB2,HIGH);
+pinMode(2,OUTPUT);
+digitalWrite(2,HIGH);
 }}}
 
 *digitalRead(PIN);*
@@ -47,13 +47,13 @@ Example:
 {{{
 bool PB1state;
  
-pinMode(PB1,INPUT);
-PB1state=digitalRead(PB1);
+pinMode(1,INPUT);
+PB1state=digitalRead(1);
 if(PB1state==HIGH)
 {
-Serial.println("PB1 state is high");
+Serial.println("PIN1 state is high");
 } else {
-Serial.println("PB1 state is low");
+Serial.println("PIN1 state is low");
 }
 }}}
 
@@ -61,7 +61,7 @@ Serial.println("PB1 state is low");
 
 *analogRead(ADC_CHANNEL);*
 Read analog input, the output value is between 0-4095 representing 0-5V.
-Example
+Example:
 {{{
 int AnalogData;
 

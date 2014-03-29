@@ -1,0 +1,21 @@
+#summary Arduino Wiring documentation for XMC porting
+#labels documentation
+
+= Introduction =
+
+Here some deeper documentation of the Arduino Wiring language porting to XMC microcontrollers.
+
+
+==Pin mode==
+
+pinMode(PIN,MODE);
+Set the specified PIN to MODE
+MODE can be
+
+INPUT for receiving digital input
+OUTPUT for sending digital output
+
+(not that not every PIN has analog functionality, please refer to PIN definition table)
+example:
+
+pinMode(PB1,INPUT);

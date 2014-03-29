@@ -6,9 +6,9 @@
 Here some deeper documentation of the Arduino Wiring language porting to XMC microcontrollers.
 
 
-==Pin mode==
+=Pin mode=
 
-pinMode(PIN,MODE);
+*pinMode(PIN,MODE);*
 Set the specified PIN to MODE
 MODE can be
 
@@ -30,4 +30,29 @@ pinMode(PB1,INPUT);
 #define INPUT_PULLUP	2
 #define INPUT_PULLDW	3
 #define PWM				4
+}}}
+
+=Digital input/output=
+
+*digitalWrite(PIN,DATA);*
+Send digtal DATA output to PIN. DATA can be either HIGH or LOW
+example:
+{{{
+pinMode(PB2,OUTPUT);
+digitalWrite(PB2,HIGH);
+digitalRead(PIN);
+}}}
+Read digital input from PIN. The result can be either HIGH or LOW.
+example:
+{{{
+bool PB1state;
+ 
+pinMode(PB1,INPUT);
+PB1state=digitalRead(PB1);
+if(PB1state==HIGH)
+{
+Serial1.println("PB1 state is high");
+} else {
+Serial1.println("PB1 state is low");
+}
 }}}

@@ -68,6 +68,8 @@ int AnalogData;
 AnalogData=analogRead(A0);
 Serial.printf("Analog channel 0 input is %d",AnalogData);
 
-AnalogData=analogRead(A6);
-Serial.printf("Analog channel 6 input is %d",AnalogData);
+AnalogData=analogRead(A5);
+Serial.printf("Analog channel 5 input is %d",AnalogData);
 }}}
+
+*Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit

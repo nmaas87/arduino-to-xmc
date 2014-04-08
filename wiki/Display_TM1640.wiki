@@ -1,0 +1,97 @@
+#summary Examples TM1640 LED Display Modules
+#labels TM1640LEDDisplayModules,Example
+
+= TM1640 LED Display Modules =
+
+The purpose of this article is to demonstrate the use of the second (here’s the first) interesting LED display module I discovered on the dealextreme website, for example:
+http://i1.wp.com/tronixstuff.com/wp-content/uploads/2012/04/tm1640display.jpg
+
+[... http://tronixstuff.com/2012/04/09/arduino-and-tm1640-led-display-modules/...]
+
+
+= Hardware Required =
+
+XMC1100 Boot Kit board: http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_TM1640.jpg
+
+= Circuit =
+
+Connect the TM1640 display as:
+ * Vcc to XMC +5V
+ * GND to XMC GND
+ * DIN to Arduino XMC Pin7
+ * SCLK to Arduino XMC Pin 8
+
+= Code =
+
+== Example 1 ==
+Simple program to scroll a digit across the 16 display digits:
+{{{
+/*
+ * Main.c
+ *
+ */
+
+#define ARDUINO_MAIN
+#include "Arduino.h"
+
+#include <XMC1100.h>		//SFR declarations of the selected device
+#include <DAVE3.h>
+
+int main(void)
+{
+
+	 /*
+	  *  Periferals Initialization
+	  */
+	wiring_digital_init();
+	wiring_analog_init();
+	DAVE_Init();
+
+	// Arduino's main() function just calls setup() and loop()....
+	setup();
+	while (1) {
+		loop();
+		//yield();
+	}
+}
+
+
+//****************************************************************************
+// 							       ARDUINO SKETCH
+//****************************************************************************
+#include "TM1640.h"
+//#include <stdio.h>
+
+int ledState = LOW;             // ledState used to set the LED
+long previousMillis = 0;        // will store last time LED was updated
+
+// the follow variables is a long because the time, measured in miliseconds,
+// will quickly become a bigger number than can be stored in an int.
+long interval = 1000;           // interval at which to blink (milliseconds)
+
+
+void setup()
+{
+	// Init Display: define a module on data pin 7, clock pin 8
+	TM1640_Init(7, 8);
+	pinMode(LED2, OUTPUT);
+}
+
+void loop()
+{
+	  int i;
+
+	  for (i=0; i<16; i++)
+	  {
+	    delay(500);
+	    TM1640_clearDisplay();
+	    TM1640_setDisplayDigit(i, i, false);
+	  }
+	  delay(60);
+}
+
+//****************************************************************************
+// 							       END OF FILE
+//****************************************************************************
+
+}}}

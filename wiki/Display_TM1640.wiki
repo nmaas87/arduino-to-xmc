@@ -3,7 +3,7 @@
 
 = TM1640 LED Display Modules =
 
-The purpose of this article is to demonstrate the use of the second (here’s the first) interesting LED display module I discovered on the dealextreme website, for example:
+The purpose of this article is to demonstrate the use of an interesting LED display module I discovered on the dealextreme website, for example:
 http://i1.wp.com/tronixstuff.com/wp-content/uploads/2012/04/tm1640display.jpg
 
 [... http://tronixstuff.com/2012/04/09/arduino-and-tm1640-led-display-modules/...]

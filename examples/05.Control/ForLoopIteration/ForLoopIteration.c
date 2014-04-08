@@ -3,7 +3,6 @@
  *
  */
 
-#define ARDUINO
 #define ARDUINO_MAIN
 #include "Arduino.h"
 

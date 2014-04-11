@@ -56,9 +56,9 @@ pinMode(1,INPUT);
 PB1state=digitalRead(1);
 if(PB1state==HIGH)
 {
-Serial.println("PIN1 state is high");
+uart_printf("PIN1 state is high\n");
 } else {
-Serial.println("PIN1 state is low");
+uart_printf("PIN1 state is low\n");
 }
 }}}
 
@@ -72,10 +72,47 @@ Example:
 int AnalogData;
 
 AnalogData=analogRead(A0);
-Serial.printf("Analog channel 0 input is %d",AnalogData);
+uart_printf("Analog channel 0 input is %d\n",AnalogData);
 
 AnalogData=analogRead(A5);
-Serial.printf("Analog channel 5 input is %d",AnalogData);
+uart_printf("Analog channel 5 input is %d\n",AnalogData);
 }}}
+
+*Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit
+
+= Timing=
+*millis(void);*
+Return the number of milliseconds since the program execution started.
+
+Example:
+{{{
+uart_printf("This has been running for %lu milliseconds.\r\n",millis());
+}}}
+
+*micros();*
+Return the number of microseconds since the program execution started.
+
+Example:
+{{{
+uart_printf("This has been running for %lu microseconds.\r\n",micros());
+}}} 
+
+*delay(MILLISECONDS);*
+Stop program execution for MILLISECONDS.
+*Note:* this cannot be used within interrupt functions
+
+Example:
+{{{
+delay(1000); // stop for 1000 milliseconds (1 second)
+}}} 
+
+*delayMicroseconds(MICROSECONDS);*
+Stop program execution for MICROSECONDS.
+*Note:* this cannot be used within interrupt functions
+
+Example:
+{{{
+delayMicroseconds(10000); // stop for 10000 microseconds (10 milliseconds)
+}}} 
 
 *Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit

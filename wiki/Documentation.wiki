@@ -115,4 +115,4 @@ Example:
 delayMicroseconds(10000); // stop for 10'000 microseconds (10 milliseconds)
 }}} 
 
-*Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit
+*Note:* ARDUINO-to-XMC 'delayMicroseconds()' porting description is available at http://code.google.com/p/arduino-to-xmc/wiki/delayMicroseconds

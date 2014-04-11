@@ -4,7 +4,7 @@
 http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
  * XMC1100 Microcontroller with 64KB Flash
  * Detachable SEGGER J-Link
- * Board shape & power supply for ARDUINOTM Shields: http://shieldlist.org
+ * Board shape & power supply for ARDUINO TM Shields: http://shieldlist.org
  * 6 LEDs
 
 = Arduino Uno Pins =

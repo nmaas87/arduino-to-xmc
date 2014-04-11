@@ -80,7 +80,7 @@ uart_printf("Analog channel 5 input is %d\n",AnalogData);
 
 *Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit
 
-= Timing=
+= Timing =
 *millis(void);*
 Return the number of milliseconds since the program execution started.
 
@@ -99,7 +99,7 @@ uart_printf("This has been running for %lu microseconds.\r\n",micros());
 
 *delay(MILLISECONDS);*
 Stop program execution for MILLISECONDS.
-*Note:* this cannot be used within interrupt functions
+*Note:* this cannot be used within interrupt functions!
 
 Example:
 {{{
@@ -108,11 +108,11 @@ delay(1000); // stop for 1000 milliseconds (1 second)
 
 *delayMicroseconds(MICROSECONDS);*
 Stop program execution for MICROSECONDS.
-*Note:* this cannot be used within interrupt functions
+*Note:* this cannot be used within interrupt functions!
 
 Example:
 {{{
-delayMicroseconds(10000); // stop for 10000 microseconds (10 milliseconds)
+delayMicroseconds(10000); // stop for 10'000 microseconds (10 milliseconds)
 }}} 
 
 *Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit

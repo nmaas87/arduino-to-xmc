@@ -90,7 +90,7 @@ See hardware section.
 The Servo Motor will move to the center position:
 https://arduino-to-xmc.googlecode.com/svn/wiki/Servo_centro.jpg
  
-= Example 2: Servo Unipolar Advanced =
+= Example 2: Sweep =
 {{{
 /*
  * Main.c

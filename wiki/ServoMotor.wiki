@@ -13,7 +13,7 @@ The first example is the basic code to make the motor spin the center position. 
 
 = Hardware Required =
 
-https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_ServoMotor.jpg
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_ServoMotor.JPG
 
 The Servo Motor is coming from Conrad...
 

@@ -126,6 +126,8 @@ void DAVE_MUX_Init(void)
              
    WR_REG(USIC0_CH1->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos,UsicCcrMode[1]);   
                        	         
+                                                     
+        //********* Capture/Compare Unit 4 (CAPCOM4) CONFIGURATIONS *************************             	         
                                                                  	         
                                                                  	         
                                                  
@@ -137,20 +139,14 @@ void DAVE_MUX_Init(void)
 					                         
   WR_REG(PORT0->IOCR12, 0xb8000000U, PORT_IOCR_PC3_PCR_Pos, 0x15U);                /*P0.15 : PORT0_IOCR12_PC15_PCR and PORT0_IOCR12_PC15_OE */					   
 					                         
-  WR_REG(PORT1->IOCR0, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x15U);                /*P1.0 : PORT1_IOCR0_PC0_PCR and PORT1_IOCR0_PC0_OE */					   
+  WR_REG(PORT1->IOCR0, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x12U);                /*P1.0 : PORT1_IOCR0_PC0_PCR and PORT1_IOCR0_PC0_OE */					   
 					                         
-  WR_REG(PORT1->IOCR0, 0xb800U, PORT_IOCR_PC1_PCR_Pos, 0x15U);                /*P1.1 : PORT1_IOCR0_PC1_PCR and PORT1_IOCR0_PC1_OE */					   
+  WR_REG(PORT1->IOCR0, 0xb800U, PORT_IOCR_PC1_PCR_Pos, 0x12U);                /*P1.1 : PORT1_IOCR0_PC1_PCR and PORT1_IOCR0_PC1_OE */					   
 					                         
-  WR_REG(PORT1->IOCR0, 0xb80000U, PORT_IOCR_PC2_PCR_Pos, 0x15U);                /*P1.2 : PORT1_IOCR0_PC2_PCR and PORT1_IOCR0_PC2_OE */					   
+  WR_REG(PORT1->IOCR0, 0xb80000U, PORT_IOCR_PC2_PCR_Pos, 0x12U);                /*P1.2 : PORT1_IOCR0_PC2_PCR and PORT1_IOCR0_PC2_OE */					   
 					                         
-  WR_REG(PORT1->IOCR0, 0xb8000000U, PORT_IOCR_PC3_PCR_Pos, 0x15U);                /*P1.3 : PORT1_IOCR0_PC3_PCR and PORT1_IOCR0_PC3_OE */					   
-					                         
-  WR_REG(PORT1->IOCR4, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x15U);                /*P1.4 : PORT1_IOCR4_PC4_PCR and PORT1_IOCR4_PC4_OE */					   
-					                         
-  WR_REG(PORT1->IOCR4, 0xb800U, PORT_IOCR_PC1_PCR_Pos, 0x15U);                /*P1.5 : PORT1_IOCR4_PC5_PCR and PORT1_IOCR4_PC5_OE */					   
+  WR_REG(PORT1->IOCR0, 0xb8000000U, PORT_IOCR_PC3_PCR_Pos, 0x12U);                /*P1.3 : PORT1_IOCR0_PC3_PCR and PORT1_IOCR0_PC3_OE */					   
 					                  	         
-                                                     
-        //********* Capture/Compare Unit 8 (CAPCOM8) CONFIGURATIONS *************************            	         
                                                      
 }
 
@@ -171,8 +167,8 @@ void DAVE_MUX_Init(void)
 *******************************************************************************/
  
 void DAVE_MUX_PreInit(void)
-{            
+{                
 
-/*        PORT Macro definitions for IOCR_OE, IOCR_PCR & HWSEL_HW     */                           
+/*        PORT Macro definitions for IOCR_OE, IOCR_PCR & HWSEL_HW     */                       
 }
 

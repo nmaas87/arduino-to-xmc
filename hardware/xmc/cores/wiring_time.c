@@ -73,8 +73,11 @@
 //****************************************************************************
 // @Global Variables
 //****************************************************************************
-static volatile bool bTimerExpired;
-
+static __IO bool bTimerExpired;
+static __IO uint32_t *Timervalue;
+static __IO uint32_t *CCU4TimerStart;
+static __IO uint32_t *CCU4TimerStopClear;
+static __IO uint32_t *CCU4Idlemode;
 
 //****************************************************************************
 // @External Prototypes
@@ -85,7 +88,36 @@ static volatile bool bTimerExpired;
 // @Prototypes Of Local Functions
 //****************************************************************************
 void m_Timer(void* v);
+void m_delayMicroseconds(uint32_t uiUs);
 
+//****************************************************************************
+// @Function      wiring_time_init
+//
+//----------------------------------------------------------------------------
+// @Description   Initialize the time module.
+//					Needed for delayMicroseconds() function.
+//
+//----------------------------------------------------------------------------
+// @Returnvalue   None
+//
+//----------------------------------------------------------------------------
+// @Parameters    None
+//
+//----------------------------------------------------------------------------
+// @Link          http://arduino.cc/en/Reference/HomePage
+//----------------------------------------------------------------------------
+// @Date          14/04/2014
+//
+//****************************************************************************
+
+void wiring_time_init(void)
+{
+	// Initialization of variables and register2variables setup
+		Timervalue			= &PWMSP001_Handle0.CC4yRegsPtr->TIMER;
+		CCU4TimerStart		= &PWMSP001_Handle0.CC4yRegsPtr->TCSET;
+		CCU4TimerStopClear	= &PWMSP001_Handle0.CC4yRegsPtr->TCCLR;
+		CCU4Idlemode		= &PWMSP001_Handle0.CC4yKernRegsPtr->GIDLC;
+}
 
 //****************************************************************************
 // @Function     millis
@@ -207,38 +239,28 @@ handle_t TimerId;
 //----------------------------------------------------------------------------
 // @Link          http://arduino.cc/en/Reference/DelayMicroseconds
 //----------------------------------------------------------------------------
-// @Date          29/01/2014
+// @Date          14/04/2014
 //
 //****************************************************************************
 
-void delayMicroseconds(uint32_t dwUs)
+void delayMicroseconds(uint32_t uiUs)
 {
-handle_t TimerId;
+volatile u_char i;
 
-	bTimerExpired = FALSE;
-
-	/*
-	 * This funcion uses SysTick Exception for controlling the timer list. Call back function
- 	 *	 registered through this function will be called in SysTick exception when the timer is expired.
- 	 *	 One shot timers are removed from the timer list, if it expires. To use
- 	 *	 this SW timer again it has to be first deleted and then created again.
-	 *
-	 * 	@param[in]  Period Timer period value in microseconds
-	 * 	@param[in]  TimerType Type of Timer(ONE_SHOT/PERIODIC)
-	 * 	@param[in]  TimerCallBack Call back function of the timer(No Macros are allowed)
-	 * 	@param[in]  pCallBackArgPtr Call back function parameter
-	 */
-	TimerId = SYSTM002_CreateTimer(dwUs,SYSTM002_ONE_SHOT,m_Timer,NULL);
-	if(TimerId != 0)
+	if (uiUs < 10)
 	{
-		//Timer is created successfully
-		SYSTM002_StartTimer(TimerId);
-
-		// Wait until timer expires
-		while (!bTimerExpired)
+		// just for loop of 32 clock cycle at 32MHz
+		for (i=0; i<32; i++)
 			;
-		// Delete Timer since is One-Shot
-		SYSTM002_DeleteTimer(TimerId);
+	} else {
+		if (uiUs > 100) {
+			for (i=0; i<(uiUs/100); i++)
+				m_delayMicroseconds(100);
+			// Run the rest of the delay ...
+			//m_delayMicroseconds(uiUs%100);
+		} else {
+			m_delayMicroseconds(uiUs);
+		}
 	}
 }
 
@@ -252,7 +274,25 @@ void m_Timer(void* Temp)
 	bTimerExpired = TRUE;
 }
 
+void m_delayMicroseconds(uint32_t uiUs)
+{
+uint32_t delaycount, temp_Timer;
 
+	// Start the PWM counter - PWMSP001_Start((PWMSP001_HandleType*)&PWMSP001_Handle0);
+	*CCU4Idlemode |=0x08;
+
+	delaycount = (uiUs-4)*64;
+	temp_Timer = *Timervalue;
+
+	*CCU4TimerStart		|= 0x01; 	//Start CCU timer
+
+	while(temp_Timer < delaycount)
+	{
+		temp_Timer = *Timervalue;
+	}
+
+	*CCU4TimerStopClear	|= 0x03;	//Stop CCU timer
+}
 
 
 //****************************************************************************

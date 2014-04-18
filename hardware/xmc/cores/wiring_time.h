@@ -54,6 +54,11 @@ extern "C" {
 ******************************************************************************/
 
 /**
+ * \brief Initialize the time module.
+ */
+extern void wiring_time_init(void);
+
+/**
  * \brief Returns the number of milliseconds since the Arduino board began running the current program.
  *
  * This number will overflow (go back to zero), after approximately 50 days.

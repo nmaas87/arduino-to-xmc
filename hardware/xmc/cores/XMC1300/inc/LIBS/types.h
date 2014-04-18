@@ -85,8 +85,10 @@ typedef enum BOOLType{
 }BOOLType;
 
 
+#ifndef __cplusplus
 #ifndef _STDBOOL_H
 typedef unsigned char bool;
+#endif
 #endif
 
 #ifndef EOF

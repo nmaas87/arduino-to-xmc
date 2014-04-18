@@ -105,8 +105,10 @@ void wiring_digital_init(void)
 	// XMC1100 Boot Kit has additional 6 LEDs, set as output
 		P0_5_set_mode(OUTPUT_PP_GP);	// LED2 (LED1 is pin13)
 		P0_6_set_mode(OUTPUT_PP_GP);	// LED3
-		//	P1_2_set_mode(OUTPUT_PP_GP);	// LED4 (also TX)
-		//	P1_3_set_mode(OUTPUT_PP_GP);	// LED5 (also RX)
+		// LED4 (also TX) - better not touch otherwise RS232 wouldn't work
+		//	P1_2_set_mode(OUTPUT_PP_GP);
+		// LED5 (also RX) - better not touch otherwise RS232 wouldn't work
+		//	P1_3_set_mode(OUTPUT_PP_GP);
 		P1_4_set_mode(OUTPUT_PP_GP);	// LED6
 		P1_5_set_mode(OUTPUT_PP_GP);	// LED7
 
@@ -115,7 +117,6 @@ void wiring_digital_init(void)
 		P0_6_set();
 		P1_4_set();
 		P1_5_set();
-
 }
 
 
@@ -475,7 +476,8 @@ uint32_t val = -1;
 void digitalWrite(uint8_t pin, uint8_t value)
 {
     // Set the pin
-    if (value == HIGH)
+    //if ((value & 0x1) == HIGH)		// or .. if (value != LOW)
+	if (value != LOW)
     {
 		switch(pin)
 		{

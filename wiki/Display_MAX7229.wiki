@@ -22,7 +22,7 @@ Connect the MAX7219 Led Matrix display as:
  * CLK to Arduino XMC Pin 11
  * LOAD to Arduino XMC Pin 10
  
-https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_CONN.JPG
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_Conn.JPG
  
 = Code =
 == MAX7219 Led Matrix Library==

@@ -11,7 +11,7 @@ http://img.dxcdn.com/productimages/sku_184854_1.jpg
 
 = Hardware Required =
 
-XMC1100 Boot Kit board and MAX7219 Led Matrix Display: http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_4.jpg
+XMC1100 Boot Kit board and MAX7219 Led Matrix Display: https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_4.JPG
 
 = Circuit =
 
@@ -22,8 +22,7 @@ Connect the MAX7219 Led Matrix display as:
  * CLK to Arduino XMC Pin 11
  * LOAD to Arduino XMC Pin 10
  
-http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_Conn.jpg
-
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_CONN.JPG
  
 = Code =
 == MAX7219 Led Matrix Library==
@@ -178,10 +177,10 @@ void loop()
 //****************************************************************************
 }}}
 The above example generate something like:
-http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_5.jpg
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_5.JPG
 
-http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_D.jpg
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_D.JPG
 
-http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_H.jpg
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_H.JPG
 
-http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_Q.jpg
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Max7229_Q.JPG

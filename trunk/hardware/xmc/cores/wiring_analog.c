@@ -103,6 +103,7 @@
 
 void wiring_analog_init(void)
 {
+#if ARDUINO==1100
 	SCU_GENERAL->PASSWD = 0x000000C0;
 	SCU_CLK->CGATCLR0 |= 0x00000001;	// disable VADC gating
 	while((SCU_CLK->CLKCR)&0x40000000);	// wait for VDDC to stabilize
@@ -133,6 +134,7 @@ void wiring_analog_init(void)
 	VADC->BRSMR |= 0x01UL;                                                // Gate always enabled.
 	VADC->BRSSEL[0] |= VADC_BRSSEL_CHSELG0_Msk;                           // Select P2.6 as input channel.
 	VADC->GLOBICLASS[0] |= (0x01UL << VADC_GLOBICLASS_CMS_Pos);           // Select 10-Bit conversion for channel 0.
+#endif
 }
 
 

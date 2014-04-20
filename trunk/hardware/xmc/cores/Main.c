@@ -6,7 +6,6 @@
 #define ARDUINO_MAIN
 #include "Arduino.h"
 
-#include <XMC1100.h>		//SFR declarations of the selected device
 #include <DAVE3.h>
 
 

@@ -48,12 +48,20 @@ extern "C"{
 // @Project Includes
 //****************************************************************************
 // #include general HEADER FILES.
+#if ARDUINO==1100
 #include <XMC1100.h>
-#include "types.h"
 #include ".\XMC1100\GPIO.h"
+#include ".\XMC1100\pins_arduino.h"
+#endif
+
+#if ARDUINO==1300
+#include <XMC1300.h>
+#include ".\XMC1300\GPIO.h"
+#include ".\XMC1300\pins_arduino.h"
+#endif
+#include "types.h"
 
 // #include Arduino HEADER FILES.
-#include "pins_arduino.h"
 #include "wiring_digital.h"
 #include "wiring_analog.h"
 #include "wiring_shift.h"
@@ -62,10 +70,7 @@ extern "C"{
 #include "itoa.h"
 #include "dtostrf.h"
 #include "WMath.h"
-#include "WString.h"
-#include "Print.h"
-#include "Printable.h"
-#include "Stream.h"
+
 
 /* Arduino wiring macros and bit defines  */
 #define HIGH		1

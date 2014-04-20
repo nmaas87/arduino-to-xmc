@@ -307,8 +307,8 @@ void PWMSP001_Init(void)
     }
   }
     
-      PORT1->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC2_PO_Msk));
-      PORT1->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC2_PO_Pos) & \
+      PORT2->IOCR8  &= (uint32_t)(~(PORT_IOCR_PC2_PO_Msk));
+      PORT2->IOCR8  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC2_PO_Pos) & \
                                    (uint32_t)PORT_IOCR_PC2_PO_Msk);
   Error = PWMSP001_lInit((PWMSP001_HandleType*) &PWMSP001_Handle3);
   
@@ -322,8 +322,8 @@ void PWMSP001_Init(void)
     }
   }
     
-      PORT1->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC3_PO_Msk));
-      PORT1->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC3_PO_Pos) & \
+      PORT2->IOCR8  &= (uint32_t)(~(PORT_IOCR_PC3_PO_Msk));
+      PORT2->IOCR8  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC3_PO_Pos) & \
                                    (uint32_t)PORT_IOCR_PC3_PO_Msk);
 }
 

@@ -5,7 +5,7 @@
 
 #include <XMC1300.h>
 
-#define INPUT           0x00U
+#define INPUT_TS        0x00U
 #define INPUT_PD        0x08U
 #define INPUT_PU        0x10U
 #define INPUT_PPS       0x18U

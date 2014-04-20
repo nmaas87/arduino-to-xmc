@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Project MotherSystem_Version="" Name="Arduino_XMC1300_LowLevelDriver" Path="C:\UserData\Projects\DAVE3_workspace\ws\Arduino_XMC1300_LowLevelDriver">
+<Project MotherSystem_Version="" Name="Arduino_XMC1300_LL" Path="C:\UserData\Projects\DAVE3_workspace\ws\Arduino_XMC1300_LL">
     <COMPILER>
         <Name>ARM-GCC</Name>
         <Version/>
@@ -97,8 +97,8 @@
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
-                <File_Name>SYSTM001.c</File_Name>
-                <Path>\Dave\Generated\src\SYSTM001\SYSTM001.c</Path>
+                <File_Name>SYSTM002.c</File_Name>
+                <Path>\Dave\Generated\src\SYSTM002\SYSTM002.c</Path>
                 <Type>C File</Type>
             </Source_File>
             <Source_File>
@@ -229,8 +229,8 @@
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
-                <File_Name>SYSTM001.h</File_Name>
-                <Path>\Dave\Generated\inc\SYSTM001\SYSTM001.h</Path>
+                <File_Name>SYSTM002.h</File_Name>
+                <Path>\Dave\Generated\inc\SYSTM002\SYSTM002.h</Path>
                 <Type>H File</Type>
             </Header_File>
             <Header_File>
@@ -261,9 +261,7 @@
     <Preprocessor_Symbols>
         <Assembler_Symbol>UC_ID=1301027</Assembler_Symbol>
         <Assembler_Symbol>DAVE_CE=</Assembler_Symbol>
-        <Assembler_Symbol>ARDUINO=1300</Assembler_Symbol>
         <Compiler_Symbol>UC_ID=1301027</Compiler_Symbol>
         <Compiler_Symbol>DAVE_CE=</Compiler_Symbol>
-        <Compiler_Symbol>ARDUINO=1300</Compiler_Symbol>
     </Preprocessor_Symbols>
 </Project>

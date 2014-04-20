@@ -1,0 +1,57 @@
+#summary The Software Servo Library.
+
+= The Software Servo Library =
+
+The Software Servo Library can drive servos on all of your pins simultaneously. The API is patterned after the wiring.org servo library but the code is different. You are not limited to 8 servos, but you must call the SoftwareServo::refresh() method at least once every 50ms or so to keep your servos updating. 
+
+[... http://playground.arduino.cc/ComponentLib/Servo ...]
+
+
+= Hardware Required =
+
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_ServoMotor.jpg
+
+The Servo Motor is coming from Conrad...
+
+
+= Circuit =
+
+We connect three wires to the XMC1100 board:
+ * +5V to Red Servo cable
+ * GND to Brown Servo cable
+ * pin 8 to Orange Servo cable
+
+= Example 1: Simple example =
+{{{
+#include "Arduino.h"
+
+//****************************************************************************
+// 							       ARDUINO SKETCH
+//****************************************************************************
+
+#include "SoftwareServo.h"
+
+SoftwareServo myservo;  // create servo object to control a servo
+
+int potpin = 0;  // analog pin used to connect the potentiometer
+int val;    // variable to read the value from the analog pin
+
+void setup()
+{
+  myservo.attach(2);  // attaches the servo on pin 2 to the servo object
+}
+
+void loop()
+{
+  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = map(val, 0, 1023, 0, 179);     // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(val);                  // sets the servo position according to the scaled value
+  delay(15);                           // waits for the servo to get there
+
+  SoftwareServo::refresh();
+}
+
+//****************************************************************************
+// 							       END OF FILE
+//****************************************************************************
+}}}

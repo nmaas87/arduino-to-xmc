@@ -1,42 +1,4 @@
-/*
- * Main.c
- *
- */
-
-#define ARDUINO
-#define ARDUINO_MAIN
 #include "Arduino.h"
-
-#include <XMC1100.h>		//SFR declarations of the selected device
-#include <DAVE3.h>
-
-// #include Arduino HEADER FILES.
-#include "pins_arduino.h"
-#include "wiring_digital.h"
-#include "wiring_time.h"
-#include "wiring_clock.h"
-
-int main(void)
-{
-
-	/*
-	  *  Wiring Initialization
-	  */
-	wiring_digital_init();
-	wiring_analog_init();
-
-	/*
-	  *  Periferals Initialization
-	  */
-	DAVE_Init();
-
-	// Arduino's main() function just calls setup() and loop()....
-	setup();
-	while (1) {
-		loop();
-		//yield();
-	}
-}
 
 //****************************************************************************
 // 							       ARDUINO SKETCH

@@ -116,3 +116,36 @@ delayMicroseconds(10000); // stop for 10'000 microseconds (10 milliseconds)
 }}} 
 
 *Note:* ARDUINO-to-XMC 'delayMicroseconds()' porting description is available at http://code.google.com/p/arduino-to-xmc/wiki/delayMicroseconds
+
+=Random number=
+
+*randomSeed(SEED);*
+Choose SEED to be seed of the random number in the program.
+SEED must be a number.
+To allow the program to ‘attempt’ to randomize the seed put nothing as the SEED.
+
+Example:
+To allow program to ‘attempt’ to randomize the seed autmatically
+{{{
+randomSeed();
+}}}
+To specify a random seed
+{{{
+randomSeed(1234);
+random(MAX);
+}}}
+Generate a random number between 0 and MAX-1.
+
+Example:
+{{{
+int myNumber;
+myNumber=random(1000); // get a number between 0 and 999
+random(MIN,MAX);
+}}}
+Generate a random number between MIN and MAX-1.
+
+Example:
+{{{
+int myNumber;
+myNumber=random(1000,2000); // get a number between 1000 and 1999
+}}}

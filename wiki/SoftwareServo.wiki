@@ -6,6 +6,7 @@ The Software Servo Library can drive servos on all of your pins simultaneously. 
 
 [... http://playground.arduino.cc/ComponentLib/Servo ...]
 
+*Note:* the SoftwareServo library can support as many servomotors you like, you can use any digital port for the servo signal...
 
 = Hardware Required =
 

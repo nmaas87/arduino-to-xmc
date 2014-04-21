@@ -8,5 +8,5 @@ This section describe how the Arduino Wiring language layering to XMC microcontr
 
 = Arduino to XMC Software Layering =
 
-One picture describe more than meny words...
+One picture describe more than many words...
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_to_XMC_software_layering.jpg

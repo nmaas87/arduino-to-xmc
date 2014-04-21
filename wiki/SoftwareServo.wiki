@@ -97,4 +97,6 @@ unsigned long currentMillis = millis();
 //****************************************************************************
 }}}
 
+== EXECUTION ==
+
 Observing the two servo movement, you'll see the two servo motors moving in the opposite direction.

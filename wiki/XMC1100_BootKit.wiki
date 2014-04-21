@@ -17,14 +17,14 @@ Here the Arduino pins definition code (ref. [http://code.google.com/p/arduino-to
 //  1	P1.3		Device received UART signal-TXD
 //  2	P1.4		External interrupt
 //  3	P0.0		External interrupt / PWM output
-//  4	P0.1		GPIO
-//  5	P0.2		PWM output
+//  4	P0.1		PWM output
+//  5	P0.2		GPIO
 //  6	P0.3		PWM output
 //  7	P0.4		GPIO
 //  8	P0.12		GPIO
 //  9	P0.8		PWM output
-// 10	P0.9		SPI-SS / PWM output
-// 11	P1.1		SPI-MOSI / PWM output
+// 10	P0.9		SPI-SS
+// 11	P1.1		SPI-MOSI
 // 12	P1.0		SPI-MISO
 // 13	P0.7		SPI-SCK / LED output
 // 14	GND			Ground

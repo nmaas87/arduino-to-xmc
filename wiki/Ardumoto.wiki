@@ -16,7 +16,9 @@ The Motor Shield (ARDUMOTO) is coming from Sparkfun...
 
 = Circuit =
 
-Just plug the Ardumoto on top of XMC1100 Arduino board.
+Just plug the Ardumoto on top of XMC1100 Arduino board:
+http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Ardumoto_1.JPG
+
 
 = Example: motor A =
 {{{
@@ -147,3 +149,8 @@ void loop()
 // 							       END OF FILE
 //****************************************************************************
 }}}
+
+This is what you'll get:
+http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Ardumoto_2.JPG
+
+*Note:* remember to supply the L298 H-bridge by appling an appropiate voltage to Vin (I did connect to +5V via a floating cable as visible...).

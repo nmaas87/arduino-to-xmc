@@ -8,7 +8,7 @@ This page shows two examples on how to Control the position of a RC (hobby) serv
 
 The first example is the basic code to make the motor spin the center position. The second example is coded in a more complex way, but allows to make the motor spin at different speeds, in both directions, and controlling both from a potentiometer.  
 
-[... http://playground.arduino.cc/ComponentLib/Servo ...]
+[... http://arduino.cc/en/Tutorial/Sweep ...]
 
 
 = Hardware Required =

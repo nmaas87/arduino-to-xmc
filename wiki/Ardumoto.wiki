@@ -150,6 +150,8 @@ void loop()
 //****************************************************************************
 }}}
 
+== EXECUTION ==
+
 This is what you'll get:
 http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_Ardumoto_2.JPG
 

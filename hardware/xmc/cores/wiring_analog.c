@@ -247,51 +247,27 @@ float fDutyCycle;
     // Set the pin mode
     switch(pin)
     {
-#if 0
-		//  3	P0.0		External interrupt / PWM output
+		//  3	P0.0		PWM output
     	case 3:
-			PWMSP001_Start(&PWMSP001_Handle0);
-			PWMSP001_SetDutyCycle(&PWMSP001_Handle0, fDutyCycle);
+			PWMSP001_SetDutyCycle(&PWMSP001_Handle3, fDutyCycle);
     		break;
 
-		//  5	P0.2		PWM output
+		//  4	P0.1		PWM output
     	case 5:
-			PWMSP001_Start(&PWMSP001_Handle1);
-			PWMSP001_SetDutyCycle(&PWMSP001_Handle1, fDutyCycle);
+			PWMSP001_SetDutyCycle(&PWMSP001_Handle2, fDutyCycle);
     		break;
 
 		//  6	P0.3		PWM output
     	case 6:
-			PWMSP001_Start(&PWMSP001_Handle2);
-			PWMSP001_SetDutyCycle(&PWMSP001_Handle2, fDutyCycle);
+			PWMSP001_SetDutyCycle(&PWMSP001_Handle0, fDutyCycle);
     		break;
 
 		//  9	P0.8		PWM output
     	case 9:
-    		P0_8_set_mode(outputMode);
-    		break;
-
-		// 10	P0.9		SPI-SS / PWM output
-    	case 10:
-    		P0_9_set_mode(outputMode);
-    		break;
-
-    	// 11	P1.1		SPI-MOSI / PWM output
-    	case 11:
-			PWMSP001_Start(&PWMSP001_Handle3);
-			PWMSP001_SetDutyCycle(&PWMSP001_Handle3, fDutyCycle);
-    		break;
-#endif
-
-		// 13	P0.7		SPI-SCK / LED output
-		case 13:
 			PWMSP001_SetDutyCycle(&PWMSP001_Handle1, fDutyCycle);
-			break;
+    		break;
 
-    	case LED2:
-			PWMSP001_SetDutyCycle(&PWMSP001_Handle0, fDutyCycle);
-			break;
-
+    	// all the other ...
     	default:
 			if (ulValue < 128)
 				digitalWrite(pin, LOW);

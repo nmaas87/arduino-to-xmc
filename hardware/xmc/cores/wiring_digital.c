@@ -102,6 +102,7 @@
 
 void wiring_digital_init(void)
 {
+#if ARDUINO==1100
 	// XMC1100 Boot Kit has additional 6 LEDs, set as output
 		P0_5_set_mode(OUTPUT_PP_GP);	// LED2 (LED1 is pin13)
 		P0_6_set_mode(OUTPUT_PP_GP);	// LED3
@@ -117,6 +118,7 @@ void wiring_digital_init(void)
 		P0_6_set();
 		P1_4_set();
 		P1_5_set();
+#endif
 }
 
 
@@ -190,12 +192,18 @@ uint16_t outputMode = -1;
 
 		//  3	P0.0		External interrupt / PWM output
     	case 3:
-    		P0_0_set_mode(outputMode);
+    		if (mode == PWM)
+    			PWMSP001_Start(&PWMSP001_Handle3);
+    		else
+    			P0_0_set_mode(outputMode);
     		break;
 
 		//  4	P0.1		GPIO
     	case 4:
-    		P0_1_set_mode(outputMode);
+    		if (mode == PWM)
+    			PWMSP001_Start(&PWMSP001_Handle2);
+    		else
+    			P0_1_set_mode(outputMode);
     		break;
 
 		//  5	P0.2		PWM output
@@ -205,7 +213,10 @@ uint16_t outputMode = -1;
 
 		//  6	P0.3		PWM output
     	case 6:
-    		P0_3_set_mode(outputMode);
+    		if (mode == PWM)
+    			PWMSP001_Start(&PWMSP001_Handle0);
+    		else
+    			P0_3_set_mode(outputMode);
     		break;
 
 		//  7	P0.4		GPIO
@@ -220,7 +231,10 @@ uint16_t outputMode = -1;
 
 		//  9	P0.8		PWM output
     	case 9:
-    		P0_8_set_mode(outputMode);
+    		if (mode == PWM)
+    			PWMSP001_Start(&PWMSP001_Handle1);
+    		else
+    			P0_8_set_mode(outputMode);
     		break;
 
 		// 10	P0.9		SPI-SS / PWM output
@@ -240,10 +254,7 @@ uint16_t outputMode = -1;
 
 		// 13	P0.7		SPI-SCK / LED output
     	case 13:
-    		if (mode == PWM)
-    			PWMSP001_Start(&PWMSP001_Handle1);
-    		else
-    			P0_7_set_mode(outputMode);
+			P0_7_set_mode(outputMode);
     		break;
 
 		// 14	GND			Ground
@@ -265,10 +276,7 @@ uint16_t outputMode = -1;
 
 		// LED2 30	Extended Leds P0.5
 		case LED2:
-			if (mode == PWM)
-				PWMSP001_Start(&PWMSP001_Handle0);
-			else
-				P0_5_set_mode(outputMode);
+			P0_5_set_mode(outputMode);
 			break;
 
 		// LED3 31	Extended Leds P0.6

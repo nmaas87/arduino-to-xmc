@@ -7,7 +7,7 @@ http://www.infineon.com/export/sites/default/media/products/Microcontrollers/dev
  * Board shape & power supply for Arduino™ Shields: http://shieldlist.org
  * 6 LEDs
 
-= Arduino Uno Pins =
+== Arduino Uno Pin layout mapping to XMC1100 Boot Kit ==
 https://arduino-to-xmc.googlecode.com/svn/wiki/ARDUINO_XMC1100_pins.png
 
 Here the Arduino pins definition code (ref. [http://code.google.com/p/arduino-to-xmc/source/browse/trunk/hardware/xmc/cores/pins_arduino.h pins_arduino.h]):
@@ -64,7 +64,7 @@ Here the Arduino pins definition code (ref. [http://code.google.com/p/arduino-to
 
 }}}
 
-= Docs and links =
+== Docs and links ==
  * Boot Kit XMC110: [http://www.infineon.com/cms/en/product/microcontrollers/32-bit-industrial-microcontrollers-based-on-arm-registered-cortex-tm-m/32-bit-xmc4000-industrial-microcontrollers-arm-registered-cortex-tm-m4/xmc-development-tools-software-and-kits/xmc1000-starter-kits/boot-kit-xmc1100/channel.html?channel=db3a30433cfb5caa013d115dda020665 Documents]
  * XMC1100 Boot Kit: [http://www.infineon.com/dgdl/XMC1100_Boot_Kit_Getting_Started_v1_2.pdf?folderId=db3a304334fac4c601350a01037e11d2&fileId=db3a30433da119ff013da234ec27141c&ack=t Getting Started]
  * XMC1000 Boot Kit Getting Started: [http://2696.2871.m.edge-cdn.net/vsc_2871_2696_1_vid_511733/XMC1000-Boot-Kit-Getting-Started-Introduction.html Introduction video]

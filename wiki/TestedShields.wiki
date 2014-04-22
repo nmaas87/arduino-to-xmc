@@ -1,0 +1,14 @@
+#summary XMC tested (compatible) shields
+#labels Shields
+
+= Introduction =
+
+This page summarize all tested shields with Arduino_to_XMC library and XMC1100 boot kit hardware.
+
+
+= Shields =
+
+Here the tested shields and related examples:
+ * Joystick
+ * Ardumotor
+... More will come.

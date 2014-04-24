@@ -1,5 +1,5 @@
 #summary XMC tested (compatible) shields
-#labels Shields
+#labels SupportedShields
 
 = Introduction =
 
@@ -9,6 +9,6 @@ This page summarize all tested shields with Arduino_to_XMC library and XMC1100 b
 = Shields =
 
 Here the tested shields and related examples:
- * Joystick
- * Ardumotor
+ * [https://code.google.com/p/arduino-to-xmc/wiki/JoystickShield Joystick Shield]
+ * [http://code.google.com/p/arduino-to-xmc/wiki/Ardumoto Motor Driver Shield (Ardumoto)]
 ... More will come.

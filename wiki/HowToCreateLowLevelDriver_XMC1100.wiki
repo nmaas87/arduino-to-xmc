@@ -25,10 +25,20 @@ After pressing 'Finish', you''l get your empty project:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_3.png
 
 = STEP 2 - Create the Wiring_time Low Level driver =
-In order to support the 'delay()', 'delayMicroseconds()', ... functions, it is needed to add the 'SYSTM002' application. To do this, type 'SYSTM002' in the 'App Selection View - Search filter':
+== STEP 2.a - Add 'SYSTM002' Application ==
+In order to support the 'delay()', 'millis()', ... functions, it is needed to add the 'SYSTM002' application. To do this, type 'SYSTM002' in the 'App Selection View - Search filter':
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_4.png
 then double click on the 'SYSTM002[1.0.0]' application in order to add one instance to your project. You'll get this in the 'S/W App Connectivy View':
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_5.png
 
 Now, just to double check that the default setting have not been changed in your DAvE latest release, just double click on the 'SYSTM002/0' image (ref. A), you must have (ref.B):
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_6.png
+
+Now, double click on the 'CLK002/0' image (ref. A), you must set 'PCLK= 2*MCLK' (ref.B):
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_7.jpg
+
+== STEP 2.b - Add 'PWMSP001' Application ==
+In order to support the 'delayMicroseconds()' function, it is needed to add the 'PWMSP001' application. To do this, type 'PWMSP001' in the 'App Selection View - Search filter'. Then double click on the 'PWMSP001[1.0.26]' application in order to add one instance to your project. You'll get this in the 'S/W App Connectivy View':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_8.jpg
+
+Now, just to double check that the default setting have not been changed in your DAvE latest release, just double click on the 'PWMSP001/0' image (ref. C), you must have (ref.D).

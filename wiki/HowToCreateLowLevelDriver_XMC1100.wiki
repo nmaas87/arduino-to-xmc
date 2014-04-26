@@ -38,7 +38,19 @@ Now, double click on the 'CLK002/0' image (ref. A), you must set 'PCLK= 2*MCLK' 
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_7.jpg
 
 == STEP 2.b - Add 'PWMSP001' Application ==
-In order to support the 'delayMicroseconds()' function, it is needed to add the 'PWMSP001' application. To do this, type 'PWMSP001' in the 'App Selection View - Search filter'. Then double click on the 'PWMSP001[1.0.26]' application in order to add one instance to your project. You'll get this in the 'S/W App Connectivy View':
+In order to support the 'delayMicroseconds()' function, it is needed to add the 'PWMSP001' application. To do this, type 'PWMSP001' in the 'App Selection View - Search filter' (ref. A). Then double click on the 'PWMSP001[1.0.26]' application (ref. B) in order to add one instance to your project. You'll get this in the 'S/W App Connectivy View':
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_8.jpg
 
 Now, just to double check that the default setting have not been changed in your DAvE latest release, just double click on the 'PWMSP001/0' image (ref. C), you must have (ref.D).
+
+= STEP 3 - Create the Wiring_clock Low Level driver =
+In order to support the 'setTime()', 'now()',.. functions, it is needed to add the 'RTC001' application. To do this, type 'RTC001' in the 'App Selection View - Search filter' (ref. A). Then double click on the 'RTC001[1.0.30]' application (ref. B) in order to add one instance to your project. You'll get this in the 'S/W App Connectivy View':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_9.jpg
+
+Now, just to double check that the default setting have not been changed in your DAvE latest release, just double click on the 'RTC001/0' image (ref. C), you must have (ref.D).
+
+= STEP 4 - Create the Serial Monitor Low Level driver =
+In order to support the Serial Monitor feature (RS232 over USB), it is needed to add the 'UART001' application. To do this, type 'UART001' in the 'App Selection View - Search filter' (ref. A). Then double click on the 'UART001[1.0.30]' application (ref. B) in order to add one instance to your project. You'll get this in the 'S/W App Connectivy View':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_10.jpg
+
+Now, just to double check that the default setting have not been changed in your DAvE latest release, just double click on the 'UART001/0' image (ref. C), you must have (ref.D).

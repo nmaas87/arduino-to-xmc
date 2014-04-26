@@ -3,8 +3,8 @@
 
 = First Steps to get Arduino code running on XMC1100 =
 You need:
- * The board: Infineon XMC1100 Boot Kit 
- * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8) 
+ * The board: Infineon XMC1100 Boot Kit or Infineon XMC1300 Boot Kit
+ * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8 or later) 
 
 
 == Arduino to XMC Library ==

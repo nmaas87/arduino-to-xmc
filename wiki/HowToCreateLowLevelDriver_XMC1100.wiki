@@ -20,3 +20,10 @@ By 'File->New' (or ALT+SHIFT+N) create a new DAvE CE project:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_1.png
 
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_2.png
+
+After pressing 'Finish', you''l get your empty project:
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_3.png
+
+= STEP 2 - Create the Wiring_time Low Level driver =
+In order to support the 'delay()', 'delayMicroseconds()', ... functions, it is needed to add the 'SYSTM002' application. To do this, type 'SYSTM002' in the 'App Selection View - Search filter':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_4.png

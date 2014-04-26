@@ -1,0 +1,22 @@
+#summary How to create the Low Level Driver for XMC1100 via DAvE
+#labels LowLevelDriverforXMC1100,Arduino
+
+= Introduction =
+
+This chapter explain you how to create the Low Level Driver for XMC1100 via DAvE.
+
+You need:
+ * The board: Infineon XMC1100 Boot Kit or Infineon XMC1300 Boot Kit
+ * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8 or later) 
+
+
+= STEP 1 - Create the DAvE CE project =
+
+By 'File->New' (or ALT+SHIFT+N) create a new DAvE CE project:
+ * Project Name: 'Arduino_XMC1300_LowLevelDriver'
+ * DAVE CE Project setting
+ * Processor Info: XMC1302-TO38X0200
+
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_1.png
+
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_2.png

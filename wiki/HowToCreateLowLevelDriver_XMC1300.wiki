@@ -102,6 +102,9 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Ste
 = STEP 8 - Optimize Low Level driver code =
 In order to save code size, it is important to configure the compiler options:
  # code size optimization: 
+   * project options (ALT+ENTER): http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_19.jpg
+   * http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_20.jpg
+
  # linker optimization:
  
  

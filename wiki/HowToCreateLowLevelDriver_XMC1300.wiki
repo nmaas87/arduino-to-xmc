@@ -87,6 +87,23 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Ste
 Here for example the pin 3 setting:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_15.jpg
  
+= STEP 6 - Generate the Low Level driver code =
+We can now trigger the code generation, just click on 'Generate Code':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_16.jpg
+
+= STEP 7 - Compile the Low Level driver code =
+In order to compile the Low level driver code, just click on 'Build Active Project':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_17.jpg
+
+In the console window, you should get:
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_18.jpg
+
+
+= STEP 8 - Optimize Low Level driver code =
+In order to save code size, it is important to configure the compiler options:
+ # code size optimization: 
+ # linker optimization:
+ 
  
  
 

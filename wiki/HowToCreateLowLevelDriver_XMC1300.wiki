@@ -75,6 +75,17 @@ Now, just double click on the 'PWMSP001/x' image, you must set the paramenters a
  * PWM freq = 10000 (Hz).
 
 It is now required to configure the respective pins connected to each of the PWM generator. To do this, select each of the 'PWMSP001/x' images, right-click, 'Manual Pin Assignment':
-http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_13.jpg
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_14.jpg
+Now select the 'pin_directoutput' and the respective pins:
+ * PWMSP001/0 is P0.3 (pin 6)
+ * PWMSP001/1 is P0.8 (pin 9)
+ * PWMSP001/2 is P0.0 (pin 3)
+ * PWMSP001/3 is P0.1 (pin 4)
+
+Here for example the pin 3 setting:
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_15.jpg
+ 
+ 
+ 
 
 

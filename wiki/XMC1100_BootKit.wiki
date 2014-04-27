@@ -1,7 +1,6 @@
 #summary XMC1100 Boot Kit
 #labels XMC1100BootKit,pins,IOs
 = XMC1100 Boot Kit =
-http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC1100.jpg
  * XMC1100 Microcontroller with 64KB Flash
  * Detachable SEGGER J-Link
  * Board shape & power supply for Arduino™ Shields: http://shieldlist.org

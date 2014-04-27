@@ -34,6 +34,8 @@ pinMode(1,INPUT);
 #define PWM		4
 }}}
 
+*Note:* Arduino-to-XMC requires to define the PWM channels as 'pinMode(pin,PWM)'. This is different in respect to standard Arduino Wiring language and is needed to correctly map the pin to the Pulse Width Modulation function (check [https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit Making physical connections to the XMC1100 Arduino™ board] to know what are the pins available to generate PWM signals).  
+
 =Digital input/output=
 
 *digitalWrite(PIN,DATA);*
@@ -56,9 +58,9 @@ pinMode(1,INPUT);
 PB1state=digitalRead(1);
 if(PB1state==HIGH)
 {
-uart_printf("PIN1 state is high\n");
+      uart_printf("PIN1 state is high\n");
 } else {
-uart_printf("PIN1 state is low\n");
+      uart_printf("PIN1 state is low\n");
 }
 }}}
 

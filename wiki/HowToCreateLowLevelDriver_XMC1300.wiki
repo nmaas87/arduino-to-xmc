@@ -60,8 +60,8 @@ Now, just to double check that the default setting have not been changed in your
 
 = STEP 5 - Create the PWM Low Level driver =
 In order to add the additional 3 PWM channels (XMC1300 can support up to 4 PWM channels), it is required to:
- 1. add 3 more 'PWMSP001' instances;
- 2. configure the related I/O pins.
+ # add 3 more 'PWMSP001' instances;
+ # configure the related I/O pins.
  
 One 'PWMSP001' instance ('PWMSP001/0') has been already created to support the 'delayMicroseconds()' function (ref. STEP 2.b). 
 In order to add 3 more instances, type 'PWMSP001' in the 'App Selection View - Search filter'. Then double click on the 'PWMSP001[1.0.26]' application. In the 'App sharability' window, select the already Existing Apps: 'app/ccu4global/0':
@@ -70,8 +70,11 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Ste
 *Note:* repeat the above procedure three time, so to have in total 4 instances of the 'PWMSP001' application:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_12.jpg
  
-Now, just double click on the 'PWMSP001/x' image (ref. C), you must set the paramenters as shown in (ref.D):
+Now, just double click on the 'PWMSP001/x' image, you must set the paramenters as shown in [http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_PWMSP001_settings.jpg PWMSP001 settings]:
  * CCU4 resolution = 16;
  * PWM freq = 10000 (Hz).
 
- 
+It is now required to configure the respective pins connected to each of the PWM generator. To do this, select each of the 'PWMSP001/x' images, right-click, 'Manual Pin Assignment':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_13.jpg
+
+

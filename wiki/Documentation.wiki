@@ -92,6 +92,8 @@ http://arduino.cc/en/uploads/Tutorial/pwm.gif
 
 *Note 2:* the frequency of the PWM signal (i.e., the frequency of a complete on/off cycle) on the Arduino is approximately 490 Hz. On Arduino-to-XMC it is set at 10 KHz (ref [http://code.google.com/p/arduino-to-xmc/wiki/HowToCreateLowLevelDriver_XMC1300 Step 5]).
 
+*Note 3:* since XMC1x00 microcontrollers supports up to 4 hardware PWM generator pins, in case you need more PWM signals, you can use the [http://code.google.com/p/arduino-to-xmc/wiki/SoftwarePWM SoftwarePWM library].
+
 Example:
 {{{
 int ledPin = 9;      // LED connected to digital pin 9

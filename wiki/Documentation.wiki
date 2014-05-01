@@ -87,8 +87,10 @@ uart_printf("Analog channel 5 input is %d\n",AnalogData);
 *analogWrite(PIN, VALUE)*
 analogWrite() is used to create a PWM wave on a pin [http://arduino.cc/en/Reference/analogWrite analogWrite ].
 
-*Note:* the duty cycle VALUE has to be given between 0 (always off) and 255 (always on):
+*Note 1:* the duty cycle VALUE has to be given between 0 (always off) and 255 (always on):
 http://arduino.cc/en/uploads/Tutorial/pwm.gif
+
+*Note 2:* the frequency of the PWM signal (i.e., the frequency of a complete on/off cycle) on the Arduino is approximately 490 Hz. On Arduino-to-XMC it is set at 10 KHz (ref [http://code.google.com/p/arduino-to-xmc/wiki/HowToCreateLowLevelDriver_XMC1300 Step 5]).
 
 Example:
 {{{

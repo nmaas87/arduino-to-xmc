@@ -2,7 +2,7 @@
 
 = The Software Servo Library =
 
-The Software Servo Library can drive servos on all of your pins simultaneously. The API is patterned after the wiring.org servo library but the code is different. You are not limited to 8 servos, but you must call the SoftwareServo::refresh() method at least once every 20ms or so to keep your servos updating. 
+The Software Servo Library can drive servos on all of XMC's pins simultaneously. The API is patterned after the wiring.org servo library but the code is different. You are not limited to 8 servos, but you must call the SoftwareServo::refresh() method at least once every 20ms or so to keep your servos updating. 
 
 [... http://playground.arduino.cc/ComponentLib/Servo ...]
 
@@ -25,7 +25,12 @@ We connect three wires to the XMC1100 board:
  * GND to Brown Servo2 cable
  * pin 7 to Orange Servo2 cable
 
+*Note:* above connections are just as for example, any other pin can be configured for the servo signals.
+ 
 = Example: two servo counter-moving =
+
+*Note:* before testing the below example code, you need to include the related Library code into the DAvE project. Libraries code are available under [http://code.google.com/p/arduino-to-xmc/source/browse/trunk/libraries/ arduino-to-xmc/libraries].
+
 {{{
 #include "Arduino.h"
 

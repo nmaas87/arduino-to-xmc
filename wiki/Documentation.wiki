@@ -82,6 +82,34 @@ uart_printf("Analog channel 5 input is %d\n",AnalogData);
 
 *Note:* ARDUINO-to-XMC pin mapping description is available at https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit
 
+=Analog output (PWM)=
+
+*analogWrite(PIN, VALUE)*
+analogWrite() is used to create a PWM wave on a pin [http://arduino.cc/en/Reference/analogWrite analogWrite ].
+
+*Note:* the duty cycle VALUE has to be given between 0 (always off) and 255 (always on):
+http://arduino.cc/en/uploads/Tutorial/pwm.gif
+
+Example:
+{{{
+int ledPin = 9;      // LED connected to digital pin 9
+int analogPin = 3;   // potentiometer connected to analog pin 3
+int val = 0;         // variable to store the read value
+
+void setup()
+{
+  pinMode(ledPin, PWM);   // sets the pin as output
+}
+
+void loop()
+{
+  val = analogRead(analogPin);   // read the input pin
+  analogWrite(ledPin, val / 4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+}
+}}}
+
+*Note:* Arduino-to-XMC requires to define the PWM channels as 'pinMode(pin,PWM)'. This is different in respect to standard Arduino Wiring language and is needed to correctly map the pin to the Pulse Width Modulation function (check [https://code.google.com/p/arduino-to-xmc/wiki/XMC1100_BootKit Making physical connections to the XMC1100 Arduino™ board] to know what are the pins available to generate PWM signals).  
+
 = Timing =
 *millis(void);*
 Return the number of milliseconds since the program execution started.

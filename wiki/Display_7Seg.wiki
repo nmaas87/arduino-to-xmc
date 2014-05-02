@@ -1,0 +1,35 @@
+#summary Examples 7-segment LED Display Modules
+#labels 7-segment,display
+
+= 7-segment LED Display Modules =
+
+The purpose of this article is to demonstrate the use of an very simple LED display module, for example:
+http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/220px-7_segment_display_labeled.svg.png
+
+[...http://playground.arduino.cc/Main/SevenSegmentLibrary...]
+
+= Hardware Required =
+
+XMC1100 Boot Kit board and 7-segment Display: http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_TM1640.jpg
+
+= Circuit =
+
+Connect the TM1640 display as:
+ * Vcc to XMC +5V
+ * GND to XMC GND
+ * DIN to Arduino XMC Pin7
+ * SCLK to Arduino XMC Pin 8
+
+= Code =
+== Seg7 Library==
+The Seg7 library has been dowloaded from [https://github.com/DepletionMode/seg7 Seg7] and compiled under Arduino-to-XMC.
+
+== Example  ==
+Simple program to count from 0 to 9:
+{{{
+
+}}}
+The above example generate something like:
+http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1100_TM1640_Simpler.jpg
+(I could't take a video).
+

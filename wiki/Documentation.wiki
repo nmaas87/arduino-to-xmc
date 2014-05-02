@@ -85,7 +85,7 @@ uart_printf("Analog channel 5 input is %d\n",AnalogData);
 =Analog output (PWM)=
 
 *analogWrite(PIN, VALUE);*
-analogWrite() is used to create a PWM wave on a pin [http://arduino.cc/en/Reference/analogWrite analogWrite ].
+analogWrite() is used to create a PWM wave on a pin (ref.[http://arduino.cc/en/Reference/analogWrite Arduino's analogWrite()]).
 
 *Note 1:* the duty cycle VALUE has to be given between 0 (always off) and 255 (always on):
 http://arduino.cc/en/uploads/Tutorial/pwm.gif

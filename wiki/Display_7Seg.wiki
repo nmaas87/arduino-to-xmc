@@ -3,9 +3,9 @@
 
 = 7-segment LED Display Modules =
 
-The purpose of this article is to demonstrate the use of an very simple LED display module, for example:
+The purpose of this article is to demonstrate the use of an very simple LED display module, for example (I have used a 1' model HS-1106AMS):
 
-http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/220px-7_segment_display_labeled.svg.png
+http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/220px-7_segment_display_labeled.svg.png http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Seven_segment_02_Pengo.jpg/280px-Seven_segment_02_Pengo.jpg
 
 [...http://playground.arduino.cc/Main/SevenSegmentLibrary...]
 
@@ -35,6 +35,8 @@ The Seg7 library has been dowloaded from [https://github.com/DepletionMode/seg7 
 
 == Example  ==
 Simple program to count from 0 to 9:
+http://learn.parallax.com/sites/default/files/content/propeller-c-tutorials/simple-circuits/7-segment/7seg-count.png
+
 {{{
 #include "Arduino.h"
 

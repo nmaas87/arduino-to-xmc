@@ -3,7 +3,7 @@
 
 = Fading =
 
-Demonstrates the use of the analogWrite() function in fading an LED off and on. AnalogWrite uses pulse width modulation (PWM), turning a digital pin on and off very quickly, to create a fading effect. 
+Demonstrates the use of the analogWrite() function in fading an LED off and on. 'AnalogWrite()' uses pulse width modulation (PWM), turning a digital pin on and off very quickly, to create a fading effect. 
 
 [... http://arduino.cc/en/Tutorial/Fade ...]
 
@@ -15,6 +15,8 @@ XMC1100 Boot Kit board: http://www.infineon.com/export/sites/default/media/produ
 = Circuit =
 
 XMC1100 board already has one LED connected to standard Arduino pin13 port. So, there is no need to attach 220-ohm resistor and LED on pin 13.
+
+*Note:* the below code can only run on the available hardware PWM pins available. Check the XMC Boot Kit pinout. In case you need to use other pins, include SoftPWM library. Libraries code are available under [http://code.google.com/p/arduino-to-xmc/source/browse/trunk/libraries/ arduino-to-xmc/libraries].
 
 = Code =
 {{{

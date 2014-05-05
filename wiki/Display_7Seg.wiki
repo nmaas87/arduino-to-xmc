@@ -41,6 +41,8 @@ The Seg7 library has been dowloaded from [https://github.com/DepletionMode/seg7 
 Simple program to count from 0 to 9:
 http://learn.parallax.com/sites/default/files/content/propeller-c-tutorials/simple-circuits/7-segment/7seg-count.png
 
+*Note:* before testing the below example code, you need to include the related Library code into the DAvE project. Libraries code are available under [http://code.google.com/p/arduino-to-xmc/source/browse/trunk/libraries/ arduino-to-xmc/libraries].
+
 {{{
 #include "Arduino.h"
 

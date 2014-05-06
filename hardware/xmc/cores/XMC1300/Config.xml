@@ -253,10 +253,10 @@
         <Assembly_Files/>
     </Generated_Files>
     <Include_Path>
-        <Path>\Dave\Generated\inc\MATHLIBS</Path>
-        <Path>\Dave\Generated\inc\DAVESupport</Path>
         <Path>\Dave\Generated\inc\MOTORLIBS</Path>
+        <Path>\Dave\Generated\inc\MATHLIBS</Path>
         <Path>\Dave\Generated\inc\LIBS</Path>
+        <Path>\Dave\Generated\inc\DAVESupport</Path>
     </Include_Path>
     <Preprocessor_Symbols>
         <Assembler_Symbol>UC_ID=1301027</Assembler_Symbol>

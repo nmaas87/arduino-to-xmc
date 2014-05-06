@@ -103,7 +103,9 @@ void DAVE_MUX_Init(void)
     						
    /*USIC 0 Channel 0 Mux Related SFR/Bitfields Configurations*/ 									  					 				 				 		       				              				  					    					 					   				  					 				 				       				  										 									 					 					  									      					              					  						    					      
        						
-   /*USIC 0 Channel 1 Mux Related SFR/Bitfields Configurations*/ 									  					 				 				 		       				              				  					    					 					   				  					 				 				       				  										 									 					 					  									      					              					  						    					      
+   /*USIC 0 Channel 1 Mux Related SFR/Bitfields Configurations*/ 						         
+ WR_REG(USIC0_CH1->DX0CR, USIC_CH_DX0CR_DSEL_Msk, USIC_CH_DX0CR_DSEL_Pos,1); 
+  			  					 				 				 		       				              				  					    					 					   				  					 				 				       				  										 									 					 					  									      					              					  						    					      
                  
    // Data Pointer & Buffer Size for Transmitter Buffer Control  
  WR_REG(USIC0_CH1->TBCTR, USIC_CH_TBCTR_DPTRSIZE_Msk, USIC_CH_TBCTR_DPTRSIZE_Pos,0x01000002);		/*    DPTR = 2,  SIZE = 1 */ 
@@ -131,19 +133,20 @@ void DAVE_MUX_Init(void)
                                                  
 
 /*        PORT Macro definitions for IOCR_OE, IOCR_PCR & HWSEL_HW     */                                      
-  WR_REG(PORT1->IOCR0, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x12U);                /*P1.0 : PORT1_IOCR0_PC0_PCR and PORT1_IOCR0_PC0_OE */					   
+  WR_REG(PORT0->IOCR0, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x14U);                /*P0.0 : PORT0_IOCR0_PC0_PCR and PORT0_IOCR0_PC0_OE */					   
 					                         
-  WR_REG(PORT1->IOCR0, 0xb800U, PORT_IOCR_PC1_PCR_Pos, 0x12U);                /*P1.1 : PORT1_IOCR0_PC1_PCR and PORT1_IOCR0_PC1_OE */					   
+  WR_REG(PORT0->IOCR0, 0xb800U, PORT_IOCR_PC1_PCR_Pos, 0x14U);                /*P0.1 : PORT0_IOCR0_PC1_PCR and PORT0_IOCR0_PC1_OE */					   
 					                         
-  WR_REG(PORT1->IOCR0, 0xb80000U, PORT_IOCR_PC2_PCR_Pos, 0x17U);                /*P1.2 : PORT1_IOCR0_PC2_PCR and PORT1_IOCR0_PC2_OE */					   
-					  
-           
-  WR_REG(PORT2->PDISC, PORT2_PDISC_PDIS10_Msk, PORT2_PDISC_PDIS10_Pos, PORT_PDISC_PDIS0);            /*    P2.10 : PORT2_PDISC_PDIS10 */                       
-  WR_REG(PORT2->IOCR8, 0xb80000U, PORT_IOCR_PC2_PCR_Pos, 0x12U);                /*P2.10 : PORT2_IOCR8_PC10_PCR and PORT2_IOCR8_PC10_OE */					   
-					  
-           
-  WR_REG(PORT2->PDISC, PORT2_PDISC_PDIS11_Msk, PORT2_PDISC_PDIS11_Pos, PORT_PDISC_PDIS0);            /*    P2.11 : PORT2_PDISC_PDIS11 */                       
-  WR_REG(PORT2->IOCR8, 0xb8000000U, PORT_IOCR_PC3_PCR_Pos, 0x12U);                /*P2.11 : PORT2_IOCR8_PC11_PCR and PORT2_IOCR8_PC11_OE */					   
+  WR_REG(PORT0->IOCR0, 0xb8000000U, PORT_IOCR_PC3_PCR_Pos, 0x14U);                /*P0.3 : PORT0_IOCR0_PC3_PCR and PORT0_IOCR0_PC3_OE */					   
+					    
+                       
+  /* Masking P0.8, Since Upon reset, the value of PC8 (P0.8) is 00000b. 
+  The startup software (SSW) will change the PC8 value to input pull-up device active, 00010b. */ 
+  WR_REG(PORT0->IOCR8, PORT_IOCR_PC0_PCR_Msk, PORT_IOCR_PC0_PCR_Pos, PORT_IOCR_PCR0);            /*    P0.8 : PORT0_IOCR8_PC8_PCR */
+                                            
+  WR_REG(PORT0->IOCR8, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x14U);                /*P0.8 : PORT0_IOCR8_PC8_PCR and PORT0_IOCR8_PC8_OE */					   
+					                         
+  WR_REG(PORT1->IOCR0, 0xb8000000U, PORT_IOCR_PC3_PCR_Pos, 0x17U);                /*P1.3 : PORT1_IOCR0_PC3_PCR and PORT1_IOCR0_PC3_OE */					   
 					                  	         
                                                      
 }

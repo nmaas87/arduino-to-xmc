@@ -59,9 +59,17 @@ extern "C"{
 #include ".\XMC1300\GPIO.h"
 #include ".\XMC1300\pins_arduino.h"
 #endif
+
+#if ARDUINO==4500
+#include <XMC4500.h>
+#include ".\XMC4500\GPIO.h"
+#include ".\XMC4500\pins_arduino.h"
+#endif
+
 #include "types.h"
 
 // #include Arduino HEADER FILES.
+#include "binary.h"
 #include "wiring_digital.h"
 #include "wiring_analog.h"
 #include "wiring_shift.h"

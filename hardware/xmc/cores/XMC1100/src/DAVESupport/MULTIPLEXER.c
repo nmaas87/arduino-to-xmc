@@ -95,14 +95,27 @@ void DAVE_MUX_Init(void)
         
            
    /* Disable mode before configuring all USIC registers to avoid unintended edges */   
-               
+          
+    UsicCcrMode[0] |= (uint32_t) RD_REG(USIC0_CH0->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos);
+    WR_REG(USIC0_CH0->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos,0);  
+                        
     UsicCcrMode[1] |= (uint32_t) RD_REG(USIC0_CH1->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos); 
     WR_REG(USIC0_CH1->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos,0);   
                  
       
     						
-   /*USIC 0 Channel 0 Mux Related SFR/Bitfields Configurations*/ 									  					 				 				 		       				              				  					    					 					   				  					 				 				       				  										 									 					 					  									      					              					  						    					      
-       						
+   /*USIC 0 Channel 0 Mux Related SFR/Bitfields Configurations*/ 						         
+ WR_REG(USIC0_CH0->DX0CR, USIC_CH_DX0CR_DSEL_Msk, USIC_CH_DX0CR_DSEL_Pos,5); 
+  			                  
+ WR_REG(USIC0_CH0->DX1CR, USIC_CH_DX1CR_DSEL_Msk, USIC_CH_DX1CR_DSEL_Pos,4);  
+  					 				 				 		       				              				  					    					 					   				  					 				 				       				  										 									 					 					  									      					              					  						    					      
+                 
+   // Data Pointer & Buffer Size for Transmitter Buffer Control  
+ WR_REG(USIC0_CH0->TBCTR, USIC_CH_TBCTR_DPTRSIZE_Msk, USIC_CH_TBCTR_DPTRSIZE_Pos,0x01000006);		/*    DPTR = 6,  SIZE = 1 */ 
+           
+  // Data Pointer & Buffer Size for Receiver Buffer Control  
+ WR_REG(USIC0_CH0->RBCTR, USIC_CH_RBCTR_DPTRSIZE_Msk, USIC_CH_RBCTR_DPTRSIZE_Pos,0x01000004);		/*    DPTR = 4,  SIZE = 1 */ 
+ 						
    /*USIC 0 Channel 1 Mux Related SFR/Bitfields Configurations*/ 									  					 				 				 		       				              				  					    					 					   				  					 				 				       				  										 									 					 					  									      					              					  						    					      
                  
    // Data Pointer & Buffer Size for Transmitter Buffer Control  
@@ -121,7 +134,9 @@ void DAVE_MUX_Init(void)
          
   
   /* Enable mode after configuring all USIC registers to avoid unintended edges */  
-             
+            
+   WR_REG(USIC0_CH0->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos,UsicCcrMode[0]); 
+         
    WR_REG(USIC0_CH1->CCR, USIC_CH_CCR_MODE_Msk, USIC_CH_CCR_MODE_Pos,UsicCcrMode[1]);   
                        	         
                                                      
@@ -145,6 +160,14 @@ void DAVE_MUX_Init(void)
   WR_REG(PORT0->IOCR8, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x14U);                /*P0.8 : PORT0_IOCR8_PC8_PCR and PORT0_IOCR8_PC8_OE */					   
 					                         
   WR_REG(PORT1->IOCR0, 0xb80000U, PORT_IOCR_PC2_PCR_Pos, 0x17U);                /*P1.2 : PORT1_IOCR0_PC2_PCR and PORT1_IOCR0_PC2_OE */					   
+					  
+           
+  WR_REG(PORT2->PDISC, PORT2_PDISC_PDIS0_Msk, PORT2_PDISC_PDIS0_Pos, PORT_PDISC_PDIS0);            /*    P2.0 : PORT2_PDISC_PDIS0 */                       
+  WR_REG(PORT2->IOCR0, 0xb8U, PORT_IOCR_PC0_PCR_Pos, 0x17U);                /*P2.0 : PORT2_IOCR0_PC0_PCR and PORT2_IOCR0_PC0_OE */					   
+					  
+           
+  WR_REG(PORT2->PDISC, PORT2_PDISC_PDIS1_Msk, PORT2_PDISC_PDIS1_Pos, PORT_PDISC_PDIS0);            /*    P2.1 : PORT2_PDISC_PDIS1 */                       
+  WR_REG(PORT2->IOCR0, 0xb800U, PORT_IOCR_PC1_PCR_Pos, 0x16U);                /*P2.1 : PORT2_IOCR0_PC1_PCR and PORT2_IOCR0_PC1_OE */					   
 					                  	         
                                                      
 }

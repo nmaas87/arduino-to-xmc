@@ -108,6 +108,9 @@ void DAVE_Init(void)
 	 
 	//  Initialization of app 'UART001'		     
 	UART001_Init();
+	 
+	//  Initialization of app 'I2C001'		     
+	I2C001_Init();
 	
       
 	//  MUX configurations

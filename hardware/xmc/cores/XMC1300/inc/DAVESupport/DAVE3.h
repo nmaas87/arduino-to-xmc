@@ -66,12 +66,12 @@ void DAVE_Init(void);
 // #include APP HEADER FILES.
 	#include "../../inc/LIBS/LIBS.h" 
 	#include "../../inc/CLK002/CLK002.h" 
-	#include "../../inc/NVIC_SR101/NVIC_SR101.h" 
-	#include "../../inc/RTC001/RTC001.h" 
 	#include "../../inc/SYSTM002/SYSTM002.h" 
-	#include "../../inc/UART001/UART001.h" 
 	#include "../../inc/CCU4GLOBAL/CCU4GLOBAL.h" 
 	#include "../../inc/PWMSP001/PWMSP001.h" 
+	#include "../../inc/NVIC_SR101/NVIC_SR101.h" 
+	#include "../../inc/RTC001/RTC001.h" 
+	#include "../../inc/UART001/UART001.h" 
 
                      
 #endif  /** ifndef _DAVE3_H_ */

@@ -15,14 +15,20 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/myXMC1100.jpg
  or 
 XMC1300 Boot Kit board: 
 http://arduino-to-xmc.googlecode.com/svn/wiki/XMC1300_LED.jpg
+ or
+XMC4500 Relax Kit board:
+http://www.infineon.com/export/sites/default/media/products/Microcontrollers/devel_tools_SW/XMC4500-Relax_Kit.JPG
 
 = Circuit =
 
 XMC1100 board already has one LED connected to standard Arduino pin13 port (P0.7). So, there is no need to attach 220-ohm resistor and LED on pin 13.
  or 
 XMC1300 board already has one LED connected to standard Arduino pin13 port (P0.7). So, there is no need to attach 220-ohm resistor and LED on pin 13.
+ or
+XMC4500 board already has one LED available port (P1.1). So, there is no need to attach 220-ohm resistor and LED on pin 13.
 
 = Code =
+{{{
 #include "Arduino.h"
 
 //****************************************************************************
@@ -59,3 +65,9 @@ void loop() {
 // 							       END OF FILE
 //****************************************************************************
 }}}
+
+== Execution ==
+The LED will blink at 1Hz frequency....
+
+Here the XMC4500 test:
+https://arduino-to-xmc.googlecode.com/svn/wiki/XMC4500_LedBlinking.JPG

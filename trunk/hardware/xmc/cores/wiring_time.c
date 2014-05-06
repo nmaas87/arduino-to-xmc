@@ -113,11 +113,15 @@ void m_delayMicroseconds(uint32_t uiUs);
 void wiring_time_init(void)
 {
 	// Initialization of variables and register2variables setup
-#if ARDUINO==1100
+#if (ARDUINO==1100)
 		Timervalue			= &PWMSP001_Handle0.CC4yRegsPtr->TIMER;
 		CCU4TimerStart		= &PWMSP001_Handle0.CC4yRegsPtr->TCSET;
 		CCU4TimerStopClear	= &PWMSP001_Handle0.CC4yRegsPtr->TCCLR;
 		CCU4Idlemode		= &PWMSP001_Handle0.CC4yKernRegsPtr->GIDLC;
+#endif
+
+#if (ARDUINO==4500)
+		// TODO...
 #endif
 }
 

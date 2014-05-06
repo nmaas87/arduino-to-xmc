@@ -277,9 +277,9 @@ void PWMSP001_Init(void)
     }
   }
     
-      PORT1->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC1_PO_Msk));
-      PORT1->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC1_PO_Pos) & \
-                                   (uint32_t)PORT_IOCR_PC1_PO_Msk);
+      PORT0->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC3_PO_Msk));
+      PORT0->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC3_PO_Pos) & \
+                                   (uint32_t)PORT_IOCR_PC3_PO_Msk);
   Error = PWMSP001_lInit((PWMSP001_HandleType*) &PWMSP001_Handle1);
   
   /* Start the app if "Start after initialization" is checked */
@@ -292,8 +292,8 @@ void PWMSP001_Init(void)
     }
   }
     
-      PORT1->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC0_PO_Msk));
-      PORT1->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC0_PO_Pos) & \
+      PORT0->IOCR8  &= (uint32_t)(~(PORT_IOCR_PC0_PO_Msk));
+      PORT0->IOCR8  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC0_PO_Pos) & \
                                    (uint32_t)PORT_IOCR_PC0_PO_Msk);
   Error = PWMSP001_lInit((PWMSP001_HandleType*) &PWMSP001_Handle2);
   
@@ -307,9 +307,9 @@ void PWMSP001_Init(void)
     }
   }
     
-      PORT2->IOCR8  &= (uint32_t)(~(PORT_IOCR_PC2_PO_Msk));
-      PORT2->IOCR8  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC2_PO_Pos) & \
-                                   (uint32_t)PORT_IOCR_PC2_PO_Msk);
+      PORT0->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC0_PO_Msk));
+      PORT0->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC0_PO_Pos) & \
+                                   (uint32_t)PORT_IOCR_PC0_PO_Msk);
   Error = PWMSP001_lInit((PWMSP001_HandleType*) &PWMSP001_Handle3);
   
   /* Start the app if "Start after initialization" is checked */
@@ -322,9 +322,9 @@ void PWMSP001_Init(void)
     }
   }
     
-      PORT2->IOCR8  &= (uint32_t)(~(PORT_IOCR_PC3_PO_Msk));
-      PORT2->IOCR8  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC3_PO_Pos) & \
-                                   (uint32_t)PORT_IOCR_PC3_PO_Msk);
+      PORT0->IOCR0  &= (uint32_t)(~(PORT_IOCR_PC1_PO_Msk));
+      PORT0->IOCR0  |= (((uint32_t)0 << (uint32_t)PORT_IOCR_PC1_PO_Pos) & \
+                                   (uint32_t)PORT_IOCR_PC1_PO_Msk);
 }
 
 /*<<<DD_PWMSP001_API_1>>>*/

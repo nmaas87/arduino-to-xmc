@@ -103,7 +103,7 @@
 
 void wiring_analog_init(void)
 {
-#if ARDUINO==1100
+#if (ARDUINO==1100) || (ARDUINO==1300)
 	SCU_GENERAL->PASSWD = 0x000000C0;
 	SCU_CLK->CGATCLR0 |= 0x00000001;	// disable VADC gating
 	while((SCU_CLK->CLKCR)&0x40000000);	// wait for VDDC to stabilize
@@ -135,6 +135,11 @@ void wiring_analog_init(void)
 	VADC->BRSSEL[0] |= VADC_BRSSEL_CHSELG0_Msk;                           // Select P2.6 as input channel.
 	VADC->GLOBICLASS[0] |= (0x01UL << VADC_GLOBICLASS_CMS_Pos);           // Select 10-Bit conversion for channel 0.
 #endif
+
+
+#if (ARDUINO==4500)
+		//... TODO
+#endif
 }
 
 
@@ -162,6 +167,7 @@ uint32_t analogRead(uint8_t pin)
 {
 uint32_t value;
 
+#if (ARDUINO==1100) || (ARDUINO==1300)
 	// calibration workaround
 		*((int*)0x480340E0) = 0x0;
 		*((int*)0x480340E4) = 0x0;
@@ -208,6 +214,11 @@ uint32_t value;
 	}
 	while ((VADC->GLOBRES & VADC_GLOBRES_VF_Msk) == 0);               	// Wait until valid flag is set.
 	value = (VADC->GLOBRES & VADC_GLOBRES_RESULT_Msk) >> 2;      		// Save the result.
+#endif
+
+#if (ARDUINO==4500)
+		//... TODO
+#endif
 
 	// Return ADC Conversion
 	return (value);
@@ -247,15 +258,16 @@ float fDutyCycle;
     // Set the pin mode
     switch(pin)
     {
+#if (ARDUINO==1100) || (ARDUINO==1300)
 		//  3	P0.0		PWM output
     	case 3:
 			PWMSP001_SetDutyCycle(&PWMSP001_Handle3, fDutyCycle);
-    		break;
+			break;
 
 		//  4	P0.1		PWM output
     	case 5:
 			PWMSP001_SetDutyCycle(&PWMSP001_Handle2, fDutyCycle);
-    		break;
+			break;
 
 		//  6	P0.3		PWM output
     	case 6:
@@ -264,8 +276,17 @@ float fDutyCycle;
 
 		//  9	P0.8		PWM output
     	case 9:
-			PWMSP001_SetDutyCycle(&PWMSP001_Handle1, fDutyCycle);
+    		PWMSP001_SetDutyCycle(&PWMSP001_Handle1, fDutyCycle);
     		break;
+#endif
+
+#if (ARDUINO==4500)
+    		//  13	P1.0		PWM output
+        	case 6:
+    			PWMSP001_SetDutyCycle(&PWMSP001_Handle0, fDutyCycle);
+        		break;
+#endif
+
 
     	// all the other ...
     	default:

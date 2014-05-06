@@ -102,9 +102,9 @@
 
 void wiring_digital_init(void)
 {
-#if ARDUINO==1100
+#if (ARDUINO==1100)
 	// XMC1100 Boot Kit has additional 6 LEDs, set as output
-		P0_5_set_mode(OUTPUT_PP_GP);	// LED2 (LED1 is pin13)
+		P0_5_set_mode(OUTPUT_PP_GP);	// LED2
 		P0_6_set_mode(OUTPUT_PP_GP);	// LED3
 		// LED4 (also TX) - better not touch otherwise RS232 wouldn't work
 		//	P1_2_set_mode(OUTPUT_PP_GP);
@@ -119,6 +119,21 @@ void wiring_digital_init(void)
 		P1_4_set();
 		P1_5_set();
 #endif
+
+#if (ARDUINO==1300)
+		//... TODO
+#endif
+
+#if (ARDUINO==4500)
+		// XMC1100 Boot Kit has additional 2 LEDs, set as output
+			P1_1_set_mode(OUTPUT_PP_GP);	// LED1
+			P1_0_set_mode(OUTPUT_PP_GP);	// LED2
+
+		// Turn-On extended LEDs
+			P1_1_reset();
+			P1_0_reset();
+#endif
+
 }
 
 
@@ -175,7 +190,54 @@ uint16_t outputMode = -1;
     // Set the pin mode
     switch(pin)
     {
-		//  0	P1.2		Device transmit UART signal-RXD
+    	/*
+    	 * PWM channels
+    	 */
+#if (ARDUINO==1100) || (ARDUINO==1300)
+			//  3	P0.0
+			case 3:
+				if (mode == PWM)
+					PWMSP001_Start(&PWMSP001_Handle3);
+				else
+					P0_0_set_mode(outputMode);
+				break;
+
+			//  4	P0.1
+			case 4:
+				if (mode == PWM)
+					PWMSP001_Start(&PWMSP001_Handle2);
+				else
+					P0_1_set_mode(outputMode);
+				break;
+
+			//  6	P0.3
+			case 6:
+				if (mode == PWM)
+					PWMSP001_Start(&PWMSP001_Handle0);
+				else
+					P0_3_set_mode(outputMode);
+				break;
+
+			//  9	P0.8
+			case 9:
+				if (mode == PWM)
+					PWMSP001_Start(&PWMSP001_Handle1);
+				else
+					P0_8_set_mode(outputMode);
+				break;
+#endif
+
+#if (ARDUINO==4500)
+				// LED2	30	// Extended Leds P1.0
+				case LED2:
+					if (mode == PWM)
+						PWMSP001_Start(&PWMSP001_Handle0);
+					else
+						P1_0_set_mode(outputMode);
+					break;
+#endif
+
+    	//  0	P1.2		Device transmit UART signal-RXD
     	case 0:
     		P1_2_set_mode(outputMode);
     		break;
@@ -190,33 +252,9 @@ uint16_t outputMode = -1;
     		P1_4_set_mode(outputMode);
     		break;
 
-		//  3	P0.0		External interrupt / PWM output
-    	case 3:
-    		if (mode == PWM)
-    			PWMSP001_Start(&PWMSP001_Handle3);
-    		else
-    			P0_0_set_mode(outputMode);
-    		break;
-
-		//  4	P0.1		GPIO
-    	case 4:
-    		if (mode == PWM)
-    			PWMSP001_Start(&PWMSP001_Handle2);
-    		else
-    			P0_1_set_mode(outputMode);
-    		break;
-
-		//  5	P0.2		PWM output
+		//  5	P0.2
     	case 5:
     		P0_2_set_mode(outputMode);
-    		break;
-
-		//  6	P0.3		PWM output
-    	case 6:
-    		if (mode == PWM)
-    			PWMSP001_Start(&PWMSP001_Handle0);
-    		else
-    			P0_3_set_mode(outputMode);
     		break;
 
 		//  7	P0.4		GPIO
@@ -227,14 +265,6 @@ uint16_t outputMode = -1;
 		//  8	P0.12		GPIO
     	case 8:
     		P0_12_set_mode(outputMode);
-    		break;
-
-		//  9	P0.8		PWM output
-    	case 9:
-    		if (mode == PWM)
-    			PWMSP001_Start(&PWMSP001_Handle1);
-    		else
-    			P0_8_set_mode(outputMode);
     		break;
 
 		// 10	P0.9		SPI-SS / PWM output
@@ -253,9 +283,14 @@ uint16_t outputMode = -1;
     		break;
 
 		// 13	P0.7		SPI-SCK / LED output
-    	case 13:
+		case 13:
+#if (ARDUINO==1100) || (ARDUINO==1300)
 			P0_7_set_mode(outputMode);
-    		break;
+#endif
+#if (ARDUINO==4500)
+			P1_1_set_mode(outputMode);
+#endif
+			break;
 
 		// 14	GND			Ground
 
@@ -274,6 +309,7 @@ uint16_t outputMode = -1;
     		P2_0_set_mode(outputMode);
     		break;
 
+#if (ARDUINO==1100) || (ARDUINO==1300)
 		// LED2 30	Extended Leds P0.5
 		case LED2:
 			P0_5_set_mode(outputMode);
@@ -303,6 +339,7 @@ uint16_t outputMode = -1;
 		case LED7:
 			P1_5_set_mode(outputMode);
 			break;
+#endif
 
 		// A0	P2.6		AA
     	case A0:
@@ -324,10 +361,12 @@ uint16_t outputMode = -1;
     		P2_10_set_mode(outputMode);
 			break;
 
+#if (ARDUINO==1100) || (ARDUINO==1300)
 		// A4	P2.11		AE
     	case A4:
     		P2_11_set_mode(outputMode);
 			break;
+#endif
 
 		// A5	P2.2		AF
     	case A5:
@@ -556,7 +595,12 @@ void digitalWrite(uint8_t pin, uint8_t value)
 
 			// 13	P0.7		SPI-SCK / LED output
 			case 13:
+#if (ARDUINO==1100) || (ARDUINO==1300)
 				P0_7_set();
+#endif
+#if (ARDUINO==4500)
+				P1_1_set();
+#endif
 				break;
 
 			// 14	GND			Ground
@@ -576,6 +620,7 @@ void digitalWrite(uint8_t pin, uint8_t value)
 				P2_0_set();
 				break;
 
+#if (ARDUINO==1100) || (ARDUINO==1300)
 			// LED2
 			case LED2:
 				P0_5_set();
@@ -605,6 +650,7 @@ void digitalWrite(uint8_t pin, uint8_t value)
 			case LED7:
 				P1_5_set();
 				break;
+#endif
 		}
 
     } else {
@@ -677,7 +723,12 @@ void digitalWrite(uint8_t pin, uint8_t value)
 
 			// 13	P0.7		SPI-SCK / LED output
 			case 13:
+#if (ARDUINO==1100) || (ARDUINO==1300)
 				P0_7_reset();
+#endif
+#if (ARDUINO==4500)
+				P1_1_reset();
+#endif
 				break;
 
 			// 14	GND			Ground
@@ -697,6 +748,7 @@ void digitalWrite(uint8_t pin, uint8_t value)
 				P2_0_reset();
 				break;
 
+#if (ARDUINO==1100) || (ARDUINO==1300)
 			// LED2
 			case LED2:
 				P0_5_reset();
@@ -726,6 +778,7 @@ void digitalWrite(uint8_t pin, uint8_t value)
 			case LED7:
 				P1_5_reset();
 				break;
+#endif
 		}
     }
 }

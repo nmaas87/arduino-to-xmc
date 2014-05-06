@@ -72,6 +72,7 @@ void DAVE_Init(void);
 	#include "../../inc/RTC001/RTC001.h" 
 	#include "../../inc/SYSTM002/SYSTM002.h" 
 	#include "../../inc/UART001/UART001.h" 
+	#include "../../inc/I2C001/I2C001.h" 
 
                      
 #endif  /** ifndef _DAVE3_H_ */

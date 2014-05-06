@@ -494,8 +494,8 @@ void UART001_Init(void)
     }
     SCU_GENERAL->PASSWD = 0x000000C3UL;     
     UART001_lInit(&UART001_Handle0);        
-    /* Configuration of TX Pin 1.2 based on User configuration */             
-    /* Configuration of RX Pin 1.3 based on User configuration */
+    /* Configuration of TX Pin 1.3 based on User configuration */             
+    /* Configuration of RX Pin 1.2 based on User configuration */
 	     
 }
  /* Function provide to reset the App to default values. */

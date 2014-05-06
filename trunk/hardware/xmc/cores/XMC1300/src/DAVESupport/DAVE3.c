@@ -91,23 +91,23 @@ void DAVE_Init(void)
 	//  Initialization of app 'CLK002'		     
 	CLK002_Init();
 	 
-	//  Initialization of app 'NVIC_SR101'		     
-	NVIC_SR101_Init();
-	 
-	//  Initialization of app 'RTC001'		     
-	RTC001_Init();
-	 
 	//  Initialization of app 'SYSTM002'		     
 	SYSTM002_Init();
-	 
-	//  Initialization of app 'UART001'		     
-	UART001_Init();
 	 
 	//  Initialization of app 'CCU4GLOBAL'		     
 	CCU4GLOBAL_Init();
 	 
 	//  Initialization of app 'PWMSP001'		     
 	PWMSP001_Init();
+	 
+	//  Initialization of app 'NVIC_SR101'		     
+	NVIC_SR101_Init();
+	 
+	//  Initialization of app 'RTC001'		     
+	RTC001_Init();
+	 
+	//  Initialization of app 'UART001'		     
+	UART001_Init();
 	
       
 	//  MUX configurations

@@ -1,0 +1,17 @@
+#summary Tick Shield (Clock Allarm)
+#labels TickShield
+
+= Introduction =
+
+Tick Tock Shield is a perfect start for beginners of Arduino world. You can learn and practice basic soldering tricks and programming principles when tinkering with this kit. Electronic could be fun even if you have bare technical knowledge cause we get your back by preparing a detailed soldering guide and a fully supported library of programming examples from easy to difficult. Hope you have fun and gain some knowledge with this kit! 
+
+http://www.seeedstudio.com/wiki/images/thumb/3/34/Tickshield_02.jpg/400px-Tickshield_02.jpg
+
+Tick Tock Shield contains most common resources for a basic electronic project, like buttons, sensors, buzzer and display. After you're done with the soldering task, it turns out to be a geek style alarm clock which can auto adjust the brightness of display and keep in synch with real world time. Model: [http://www.seeedstudio.com/depot/tick-tock-shield-p-1371.html?cPath=6_7 SLD90400P].
+
+
+== Tick Shield Docus ==
+ * [http://www.seeedstudio.com/wiki/Tick_Tock_Shield_Kit Tick Shield Wiki]
+ * [https://github.com/Seeed-Studio/Starter_Shield GitHub Library]
+ * [http://www.seeedstudio.com/wiki/images/a/a1/Tick_Shield_Schematic.pdf Tick_Shield_Schematic.pdf]
+

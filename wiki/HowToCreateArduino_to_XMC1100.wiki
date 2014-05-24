@@ -34,14 +34,18 @@ svn checkout http://arduino-to-xmc.googlecode.com/svn/trunk/ arduino-to-xmc-read
 
 == STEP 2.2 - Include into DAvE project the Arduino-to-xmc library files ==
 
-Now, select 'New' from the project panel.
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step04_1.png
+Now, select 'New'(2) from the project panel (1). An the select Folder (3).
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step05.png
-
+Select 'Advanced' and then 'Link to alternate location (Linked Folder)'. Fill the path filed with your local path to the 'hardware\xmc\cores\' directory (if you follow STEP 2.1, you should have in 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn\hardware\xmc\cores'):
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step06.png
 
 == STEP 2.3 - Include into DAvE project the Arduino libraries ==
 
-Now, select 'New' from the project panel.
-http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step05.png
+Same as for STEP 2.2: 'New -> Folder -> Advanced -> Link to alternate ...'. In this case the Arduino libraries folder path should be 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn\libraries':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step07.png
 
-http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step06.png
+= STEP 3 =
+
+
+

@@ -7,6 +7,13 @@ You need:
  * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8 or later) 
 
 
+= Do it by yourself =
+
+If you like to create the Arduino-to-XMC project by yourself, just follow this two tutorials:
+ # [http://code.google.com/p/arduino-to-xmc/wiki/HowToCreateLowLevelDriver_XMC1300 How to create Low Level Driver]
+ # [http://code.google.com/p/arduino-to-xmc/wiki/HowToCreateArduino_to_XMC1100 How to create Arduino_to_XMC1100]
+
+
 == Arduino to XMC Library ==
 
 Arduino Wiring language is available in the Arduino/hardware/xx/core folder (where xxx is the Arduino board name). To keep the same software layout, I decided to put the porting to XMC into [https://code.google.com/p/arduino-to-xmc/source/browse/trunk/hardware/xmc/cores/ XMC1100].

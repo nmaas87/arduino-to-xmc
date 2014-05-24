@@ -45,7 +45,7 @@ TM1636 tm1636(7,8);
 void init_pins()
 {
 	/*set the temperature sensor that connects with A0 to be input*/
-	pinMode(TEMPERATURE_SENSOR, INPUT);
+	//pinMode(TEMPERATURE_SENSOR, INPUT);
 }
 
 /****************************************************************/
@@ -71,18 +71,18 @@ void displayTemperature(int8_t temperature)
 	int8_t temp[4];
 	if(temperature < 0)//if the temperature is below zero?
 	{
-	/*Yes, then the left-most bit will display "-".*/
+		/*Yes, then the left-most bit will display "-".*/
 		temp[0] = INDEX_NEGATIVE_SIGN;
 		temperature = abs(temperature);
 	}
 	else if(temperature < 100)//if temperature >= 0 and temperature < 100?
 	{
-	/*Yes, then the left-most bit will display nothing.*/
+		/*Yes, then the left-most bit will display nothing.*/
 		temp[0] = INDEX_BLANK;
 	}
 	else //if temperature > 100?
 	{
-	/*Yes, then the left-most bit will normally display.*/
+		/*Yes, then the left-most bit will normally display.*/
 		temp[0] = temperature/100;
 	}
 	temperature %= 100;

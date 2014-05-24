@@ -16,7 +16,7 @@ By 'File->New' (or ALT+SHIFT+N) create a new Easy Start Project:
  * Project Name: 'Arduino_to_XMC1100' http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step01.png
  * Processor Info: http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step02.png
  
-After pressing 'Finish', you''l get your empty project. Since 'easyMain and GPIO' are not needed, just remove them:
+After pressing 'Finish', you'll get your empty project. Since 'easyMain and GPIO' are not needed, just remove them:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step03.png
  
 = STEP 2 - Include the  Arduino library files =
@@ -24,6 +24,7 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Ardui
 == STEP 2.1 - Download connect to versioning system ==
 Download the latest arduino-to-xmc files from the versioning system. As for example, I download into: 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn':
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step04.png
+
 *Note:* I use Tourtuouse SVN to connect to 'https://arduino-to-xmc.googlecode.com/svn/trunk/'. Subversion repository may be accessed using many different [http://subversion.apache.org/packages.html client programs and plug-ins]. 
 
 Use this command to anonymously check out the latest project source code (see [http://code.google.com/p/arduino-to-xmc/source/checkout ...]):
@@ -35,8 +36,10 @@ svn checkout http://arduino-to-xmc.googlecode.com/svn/trunk/ arduino-to-xmc-read
 == STEP 2.2 - Include into DAvE project the Arduino-to-xmc library files ==
 
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step04_1.png
+
 Now, select 'New'(2) from the project panel (1). An the select Folder (3).
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step05.png
+
 Select 'Advanced' and then 'Link to alternate location (Linked Folder)'. Fill the path filed with your local path to the 'hardware\xmc\cores\' directory (if you follow STEP 2.1, you should have in 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn\hardware\xmc\cores'):
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step06.png
 

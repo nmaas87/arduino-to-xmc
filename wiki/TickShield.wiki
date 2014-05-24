@@ -1,5 +1,5 @@
 #summary Tick Shield (Clock Allarm)
-#labels TickShield
+#labels TickShield,shield
 
 = Introduction =
 
@@ -169,6 +169,41 @@ void loop()
 *Attention:* the above code run properly, but the temperature is not well measered. I suppose is a metter of pin configuration (pull-up or pull-down or open-drain), but I had not enought time to debug.
 
 == TickTockShieldV2 Library ==
+The library documentation is available under:
+ * [https://github.com/Seeed-Studio/Starter_Shield GitHub Library]
+
+The Library has been slightly adapted to be working with XMC hardware. In essence, due to the order of the libraries initialization, I had to create yet another initialization function to perform the same as the object creator would do; that is an additional 'object::init()' function.
+
+To correctly use the library objects, proceed as follows:
+ * declare the object static variable as usual: 
+{{{
+TTSDisplay display;
+TTSBuzzer buz;
+TTSLight light;
+TTSTemp temp;
+TTSButton button1;
+TTSButton button2;
+TTSButton button3;
+TTSLed led1;
+TTSLed led2;
+TTSLed led3;
+TTSLed led4;
+}}}
+ * inside the Arduino's setup() function re-initialize each object:
+{{{
+	/*
+	 * Tick Shield Component Initialization
+	 */
+	button1.init(TTSK1);
+	button2.init(TTSK2);
+	button3.init(TTSK3);
+	led1.init(TTSLED1);
+	led2.init(TTSLED2);
+	led3.init(TTSLED3);
+	led4.init(TTSLED4);
+	display.init();
+	delay(100);
+}}} 
 
 === Example 2 ===
 

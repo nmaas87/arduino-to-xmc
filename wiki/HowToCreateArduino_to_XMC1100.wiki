@@ -48,17 +48,32 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Ardui
 Same as for STEP 2.2: 'New -> Folder -> Advanced -> Link to alternate ...'. In this case the Arduino libraries folder path should be 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn\libraries':
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step07.png
 
+Now, you the 'Arduino_to_XMC1100' project should look like as:
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step08.png
+
 = STEP 3 - Compiler Settings =
 
 Make sure that the compiler options are set as (ALT+ENTER on the project name): 
 http://arduino-to-xmc.googlecode.com/svn/wiki/DAvE_Config_Directories_XMC1100.png
 
+ # *Preprocessor*: you must define the following symbols:
+     * 'DAVE_CE'
+	 * 'ARDUINO=1100'
+
+ # *Directories*: you must define the following Include paths:
+     * '${workspace_loc:/${ProjName}/cores}'
+	 * '${workspace_loc:/${ProjName}/cores/XMC1100}'
+	 * '${workspace_loc:/${ProjName}/cores/XMC1100/inc}'
+	 * '${workspace_loc:/${ProjName}/cores/XMC1100/inc/LIBS}'
+	 * '${workspace_loc:/${ProjName}/cores/XMC1100/inc/DAVESupport}"
+
+*Note:* the above Preprocessor and Directories definitions must be repeated also for the C++ compiler (ARM-GCC C++ Compiler).
+	 
 = STEP 4 - Optimize code size =
 
 In order to save code size, it is important to configure the compiler options:
- # code size optimization: 
-   * project options (ALT+ENTER): http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_19.jpg
-   * http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_20.jpg
+ # code size optimization (ALT+ENTER on the project name): 
+  * http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_20.jpg
 
  # linker optimization:
   * remove unused sections: http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_21.jpg

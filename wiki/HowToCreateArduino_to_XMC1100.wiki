@@ -10,6 +10,7 @@ You need:
  * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8 or later) 
 
 
+ 
 = STEP 1 - Create the DAvE project =
 
 By 'File->New' (or ALT+SHIFT+N) create a new Easy Start Project:
@@ -18,6 +19,8 @@ By 'File->New' (or ALT+SHIFT+N) create a new Easy Start Project:
  
 After pressing 'Finish', you'll get your empty project. Since 'easyMain and GPIO' are not needed, just remove them:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step03.png
+
+
  
 = STEP 2 - Include the  Arduino library files =
 
@@ -48,8 +51,10 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Ardui
 Same as for STEP 2.2: 'New -> Folder -> Advanced -> Link to alternate ...'. In this case the Arduino libraries folder path should be 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn\libraries':
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step07.png
 
-Now, you the 'Arduino_to_XMC1100' project should look like as:
+Now, your 'Arduino_to_XMC1100' project should look like as:
 http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step08.png
+
+
 
 = STEP 3 - Compiler Settings =
 
@@ -68,6 +73,8 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/DAvE_Config_Directories_XMC1100.pn
 	 * '${workspace_loc:/${ProjName}/cores/XMC1100/inc/DAVESupport}"
 
 *Note:* the above Preprocessor and Directories definitions must be repeated also for the C++ compiler (ARM-GCC C++ Compiler).
+
+
 	 
 = STEP 4 - Optimize code size =
 
@@ -78,5 +85,15 @@ In order to save code size, it is important to configure the compiler options:
  # linker optimization:
   * remove unused sections: http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1300_LowLevelDriver_Step_21.jpg
 
+*Note:* the above code size optimization must be repeated also for the C++ compiler (ARM-GCC C++ Compiler).
+  
 = STEP 5 - Remove un-necessary files =
+
+I've not yet solved all compiler issues related to C++ code size. For this reason, I normally remove from the makefile the following files (red cross marked):
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step09.png
+
+*Note:* do not forget to exclude from the project ('Exclude resource from build') also the XMC1300 and XMC4500 subfolders (or enable them if you are compiling for such processors).
+
+Similarly, when you do not use some libraries, it is more convinient to 'Exclude resource from build' such: 
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step10.png
 

@@ -1,0 +1,47 @@
+#summary How to create the Arduino_to_XMC1100 project via DAvE
+#labels Arduino_to_XMC1100,Arduino
+
+= Introduction =
+
+This chapter explain you how to create the Arduino_to_XMC1100 for XMC1100 via DAvE.
+
+You need:
+ * The board: Infineon XMC1100 Boot Kit
+ * Environment: DAVE™ – Free Development Platform for Code Generation (DAVE™ 3.1.8 or later) 
+
+
+= STEP 1 - Create the DAvE project =
+
+By 'File->New' (or ALT+SHIFT+N) create a new Easy Start Project:
+ * Project Name: 'Arduino_to_XMC1100' http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step01.png
+ * Processor Info: http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step02.png
+ 
+After pressing 'Finish', you''l get your empty project. Since 'easyMain and GPIO' are not needed, just remove them:
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step03.png
+ 
+= STEP 2 - Include the  Arduino library files =
+
+== STEP 2.1 - Download connect to versioning system ==
+Download the latest arduino-to-xmc files from the versioning system. As for example, I download into: 'C:\UserData\Projects\DAVE3_workspace\ws\arduino-to-xmc_svn':
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step04.png
+*Note:* I use Tourtuouse SVN to connect to 'https://arduino-to-xmc.googlecode.com/svn/trunk/'. Subversion repository may be accessed using many different [http://subversion.apache.org/packages.html client programs and plug-ins]. 
+
+Use this command to anonymously check out the latest project source code (see [http://code.google.com/p/arduino-to-xmc/source/checkout ...]):
+{{{
+# Non-members may check out a read-only working copy anonymously over HTTP.
+svn checkout http://arduino-to-xmc.googlecode.com/svn/trunk/ arduino-to-xmc-read-only 
+}}}
+
+== STEP 2.2 - Include into DAvE project the Arduino-to-xmc library files ==
+
+Now, select 'New' from the project panel.
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step05.png
+
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step06.png
+
+== STEP 2.3 - Include into DAvE project the Arduino libraries ==
+
+Now, select 'New' from the project panel.
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step05.png
+
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step06.png

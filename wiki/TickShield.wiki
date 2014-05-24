@@ -43,9 +43,9 @@ To correctly use the display, proceed as follows:
  * declare the diplay static object as usual: 'TM1636 tm1636(7,8);'
  * inside the Arduino's setup() function re-initialize the dispay: 'tm1636.init(7,8);'.
  
-== Example  ==
+=== Example 1 ===
 Simple program to measure and display the temperature:
-http://learn.parallax.com/sites/default/files/content/propeller-c-tutorials/simple-circuits/7-segment/7seg-count.png
+http://www.seeedstudio.com/wiki/File:Measure_Temperature.jpg
 
 *Note:* before testing the below example code, you need to include the related Library code into the DAvE project. Libraries code are available under [http://code.google.com/p/arduino-to-xmc/source/browse/trunk/libraries/ arduino-to-xmc/libraries].
 
@@ -162,6 +162,96 @@ void loop()
 }
 
 /*The end of the "MeasureTemperature.ino"*/
+//****************************************************************************
+// 							       END OF FILE
+//****************************************************************************
+}}}
+*Attention:* the above code run properly, but the temperature is not well measered. I suppose is a metter of pin configuration (pull-up or pull-down or open-drain), but I had not enought time to debug.
+
+== TickTockShieldV2 Library ==
+
+=== Example 2 ===
+
+Simply test some buttons:
+{{{
+#include "Arduino.h"
+
+//****************************************************************************
+// 							       ARDUINO SKETCH
+//****************************************************************************
+
+// test of Tick Shield
+#include "TTSDisplay.h"
+#include "TTSButton.h"
+#include "TTSBuzzer.h"
+#include "TTSLight.h"
+#include "TTSTemp.h"
+#include "TTSLed.h"
+
+/*
+ * Tick Shield Component Declaration
+ */
+TTSDisplay display;
+TTSBuzzer buz;
+TTSLight light;
+TTSTemp temp;
+TTSButton button1;
+TTSButton button2;
+TTSButton button3;
+TTSLed led1;
+TTSLed led2;
+TTSLed led3;
+TTSLed led4;
+
+/*
+ * Static Variables
+ */
+int state = 0;
+
+void setup()
+{
+	/*
+	 * Tick Shield Component Initialization
+	 */
+	button1.init(TTSK1);
+	button2.init(TTSK2);
+	button3.init(TTSK3);
+	led1.init(TTSLED1);
+	led2.init(TTSLED2);
+	led3.init(TTSLED3);
+	led4.init(TTSLED4);
+	display.init();
+	delay(100);
+
+	/*
+	 * Display an initial value
+	 */
+    display.num(2359);
+    delay(1000);
+}
+
+void loop()
+{
+    display.pointOn();
+    if(button1.pressed())
+    {
+        delay(10);
+        if(button1.pressed())
+        {
+            state = 1-state;
+
+            if(state)
+            	led1.on();
+            else
+            	led1.off();
+        }
+        while (button1.released());
+    }
+    delay(500);
+    display.pointOff();
+    delay(500);
+}
+
 //****************************************************************************
 // 							       END OF FILE
 //****************************************************************************

@@ -95,5 +95,30 @@ http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Ardui
 *Note:* do not forget to exclude from the project ('Exclude resource from build') also the XMC1300 and XMC4500 subfolders (or enable them if you are compiling for such processors).
 
 Similarly, when you do not use some libraries, it is more convinient to 'Exclude resource from build' such: 
-http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step10.png
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step11.png
+
+= STEP 6 - Build =
+
+Now its time to Compile, only your sketch is missing ...
+{{{
+#include "Arduino.h"
+
+//****************************************************************************
+// 							       ARDUINO SKETCH
+//****************************************************************************
+
+void setup() {
+	// ...
+}
+
+void loop() {
+	// ...
+}
+
+
+//****************************************************************************
+// 							       END OF FILE
+//****************************************************************************
+}}}
+
 

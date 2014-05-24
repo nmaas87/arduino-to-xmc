@@ -121,4 +121,7 @@ void loop() {
 //****************************************************************************
 }}}
 
+Now should be allright, the empty project is about 13KB:
+http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_ProjectSteps/Arduino_XMC1100_Step12.png
+
 

@@ -45,7 +45,7 @@ To correctly use the display, proceed as follows:
  
 === Example 1 ===
 Simple program to measure and display the temperature:
-http://www.seeedstudio.com/wiki/File:Measure_Temperature.jpg
+http://www.seeedstudio.com/wiki/images/b/bb/Measure_Temperature.jpg
 
 *Note:* before testing the below example code, you need to include the related Library code into the DAvE project. Libraries code are available under [http://code.google.com/p/arduino-to-xmc/source/browse/trunk/libraries/ arduino-to-xmc/libraries].
 

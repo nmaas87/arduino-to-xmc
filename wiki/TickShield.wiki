@@ -17,14 +17,13 @@ Tick Tock Shield contains most common resources for a basic electronic project, 
 
 = Hardware Required =
 
-XMC1100 Boot Kit board: http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_TickTockShield.jpg
+XMC1100 Boot Kit board: 
+https://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_TickTockShield.JPG
 
 = Circuit =
 
 Connect the shield as:
-http://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_TickTockShield_on.JPG
-
-*Note*: in my test I left unconnected the D.P.
+https://arduino-to-xmc.googlecode.com/svn/wiki/Arduino_XMC1100_TickTockShield_on.JPG
 
 = Code =
 == TM1636 Library ==

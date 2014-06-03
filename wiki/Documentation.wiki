@@ -184,9 +184,12 @@ int myNumber;
 myNumber=random(1000,2000); // get a number between 1000 and 1999
 }}}
 
+
+
 = Interrupts Handling =
 
-Add your content here.
+In order to enable/disable the CPU interrupts, the following functions are available 'noInterrupts()' and 'interrupts()'.
+*Note:* such functions are just the CMSIS instruction redefinition (ref. '__disable_irq();' and '__enable_irq();').
 
 
 = noInterrupts() =
